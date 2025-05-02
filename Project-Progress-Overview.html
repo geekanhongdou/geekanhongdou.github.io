@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Workspace - School of Computing and Data Science</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#4f46e5',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-['Pacifico'] text-primary">logo</span>
+                <span class="text-lg font-semibold">Project Portal</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#overview" class="text-gray-700 hover:text-primary font-medium">Overview</a>
+                <a href="#details" class="text-gray-700 hover:text-primary font-medium">Details</a>
+                <a href="#documentation" class="text-gray-700 hover:text-primary font-medium">Documentation</a>
+                <a href="#resources" class="text-gray-700 hover:text-primary font-medium">Resources</a>
+                <a href="#updates" class="text-gray-700 hover:text-primary font-medium">Updates</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button class="bg-primary text-white px-4 py-2 !rounded-button whitespace-nowrap">Sign In</button>
+                <div class="w-10 h-10 flex items-center justify-center md:hidden">
+                    <i class="ri-menu-line ri-lg"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center py-16 text-white" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20tech%20research%20laboratory%20with%20data%20visualization%20screens%2C%20clean%20workspace%2C%20advanced%20computing%20equipment%2C%20soft%20lighting%2C%20blue%20and%20purple%20tech%20aesthetic%2C%20professional%20academic%20environment&width=1600&height=600&seq=12345&orientation=landscape');">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">AI-Driven Medical Imaging Analysis</h1>
+                <p class="text-xl mb-8">Developing advanced deep learning algorithms to enhance diagnostic accuracy in radiology</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-white text-primary px-6 py-3 font-medium !rounded-button whitespace-nowrap">Project Repository</button>
+                    <button class="bg-transparent border-2 border-white text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap">View Progress</button>
+                </div>
+                <div class="mt-8 flex items-center">
+                    <div class="bg-white/20 px-4 py-2 rounded-full">
+                        <span class="text-sm font-medium">Project Group ID: CSDS-2025-G07</span>
+                    </div>
+                    <div class="ml-4 bg-green-500/20 px-4 py-2 rounded-full">
+                        <span class="text-sm font-medium">Status: In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Our team is developing a novel approach to medical image analysis using state-of-the-art deep learning techniques to improve diagnostic accuracy and efficiency.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Project Objectives</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-0.5">
+                                <i class="ri-checkbox-circle-line ri-lg"></i>
+                            </div>
+                            <p class="text-gray-700">Develop a convolutional neural network capable of identifying anomalies in chest X-rays with 95%+ accuracy</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-0.5">
+                                <i class="ri-checkbox-circle-line ri-lg"></i>
+                            </div>
+                            <p class="text-gray-700">Create an explainable AI system that highlights regions of interest for radiologists</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-0.5">
+                                <i class="ri-checkbox-circle-line ri-lg"></i>
+                            </div>
+                            <p class="text-gray-700">Reduce diagnostic time by 40% through automated preliminary analysis</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center text-primary mr-3 mt-0.5">
+                                <i class="ri-checkbox-circle-line ri-lg"></i>
+                            </div>
+                            <p class="text-gray-700">Implement a user-friendly interface for clinical integration</p>
+                        </li>
+                    </ul>
+
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-semibold mb-6">Current Status</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Data Collection</span>
+                                    <span class="text-sm font-medium text-gray-700">100%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Model Development</span>
+                                    <span class="text-sm font-medium text-gray-700">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Testing & Validation</span>
+                                    <span class="text-sm font-medium text-gray-700">40%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">UI Development</span>
+                                    <span class="text-sm font-medium text-gray-700">30%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-semibold mb-6">Team Members</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <i class="ri-user-3-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Dr. Emily Chen</h4>
+                                    <p class="text-sm text-gray-600">Project Lead & ML Specialist</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <i class="ri-user-3-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Michael Rodriguez</h4>
+                                    <p class="text-sm text-gray-600">Data Scientist</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <i class="ri-user-3-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Sarah Johnson</h4>
+                                    <p class="text-sm text-gray-600">Backend Developer</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                    <i class="ri-user-3-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">David Kim</h4>
+                                    <p class="text-sm text-gray-600">UI/UX Designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <h4 class="font-semibold mb-3">Project Mentor</h4>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="ri-user-star-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Prof. James Wilson</h4>
+                                    <p class="text-sm text-gray-600">Head of AI Research, School of Computing and Data Science</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section id="details" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Project Details</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">A comprehensive overview of our methodology, technical specifications, and project timeline.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+                        <i class="ri-code-s-slash-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Technical Specifications</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>Python 3.9 with TensorFlow 2.8</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>NVIDIA A100 GPU compute cluster</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>Flask REST API backend</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>React.js frontend with Material UI</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>PostgreSQL database for metadata</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>Docker containerization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                <i class="ri-check-line"></i>
+                            </div>
+                            <span>AWS cloud deployment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+                        <i class="ri-flow-chart-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Methodology</h3>
+                    <ol class="space-y-4 text-gray-700">
+                        <li class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">1</div>
+                            <div>
+                                <h4 class="font-medium">Data Collection & Preprocessing</h4>
+                                <p class="text-sm text-gray-600 mt-1">Curated 50,000+ annotated chest X-rays from multiple hospitals with privacy-preserving techniques.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">2</div>
+                            <div>
+                                <h4 class="font-medium">Model Architecture Design</h4>
+                                <p class="text-sm text-gray-600 mt-1">Custom ResNet50-based architecture with attention mechanisms for improved feature extraction.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">3</div>
+                            <div>
+                                <h4 class="font-medium">Training & Optimization</h4>
+                                <p class="text-sm text-gray-600 mt-1">Distributed training across GPU cluster with gradient accumulation and mixed precision.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">4</div>
+                            <div>
+                                <h4 class="font-medium">Validation & Testing</h4>
+                                <p class="text-sm text-gray-600 mt-1">5-fold cross-validation with radiologist-verified ground truth labels.</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">5</div>
+                            <div>
+                                <h4 class="font-medium">Deployment & Integration</h4>
+                                <p class="text-sm text-gray-600 mt-1">Containerized microservices with API endpoints for hospital systems integration.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+                        <i class="ri-calendar-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Project Timeline</h3>
+                    <div class="space-y-4">
+                        <div class="relative pl-8 pb-5 border-l-2 border-gray-200">
+                            <div class="absolute -left-2 top-0 w-5 h-5 rounded-full bg-green-500"></div>
+                            <div>
+                                <h4 class="font-medium">Project Initialization</h4>
+                                <p class="text-sm text-gray-600">Feb 10, 2025 - Completed</p>
+                                <p class="text-sm text-gray-700 mt-1">Project scope defined, team assembled, resources allocated</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 pb-5 border-l-2 border-gray-200">
+                            <div class="absolute -left-2 top-0 w-5 h-5 rounded-full bg-green-500"></div>
+                            <div>
+                                <h4 class="font-medium">Data Collection Phase</h4>
+                                <p class="text-sm text-gray-600">Mar 15, 2025 - Completed</p>
+                                <p class="text-sm text-gray-700 mt-1">Dataset curated, preprocessed, and annotated</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 pb-5 border-l-2 border-gray-200">
+                            <div class="absolute -left-2 top-0 w-5 h-5 rounded-full bg-primary"></div>
+                            <div>
+                                <h4 class="font-medium">Model Development</h4>
+                                <p class="text-sm text-gray-600">Apr 20, 2025 - In Progress</p>
+                                <p class="text-sm text-gray-700 mt-1">CNN architecture design and training</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 pb-5 border-l-2 border-gray-200">
+                            <div class="absolute -left-2 top-0 w-5 h-5 rounded-full bg-gray-300"></div>
+                            <div>
+                                <h4 class="font-medium">Testing & Validation</h4>
+                                <p class="text-sm text-gray-600">Jun 15, 2025 - Upcoming</p>
+                                <p class="text-sm text-gray-700 mt-1">Model performance evaluation and refinement</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-2 top-0 w-5 h-5 rounded-full bg-gray-300"></div>
+                            <div>
+                                <h4 class="font-medium">Final Deployment</h4>
+                                <p class="text-sm text-gray-600">Aug 30, 2025 - Upcoming</p>
+                                <p class="text-sm text-gray-700 mt-1">System integration and deployment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold mb-6">Performance Metrics</h3>
+                <div id="performanceChart" class="w-full h-80"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentation" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Documentation</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Access our comprehensive project documentation, reports, and research findings.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Project Deliverables</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary">
+                                <i class="ri-file-text-line ri-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Project Proposal</h4>
+                                <p class="text-sm text-gray-600">Initial project scope and objectives</p>
+                            </div>
+                            <div class="ml-auto">
+                                <button class="flex items-center text-primary hover:text-primary/80 whitespace-nowrap">
+                                    <span>Download</span>
+                                    <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                        <i class="ri-download-line"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary">
+                                <i class="ri-file-text-line ri-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Literature Review</h4>
+                                <p class="text-sm text-gray-600">Analysis of existing research in the field</p>
+                            </div>
+                            <div class="ml-auto">
+                                <button class="flex items-center text-primary hover:text-primary/80 whitespace-nowrap">
+                                    <span>Download</span>
+                                    <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                        <i class="ri-download-line"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary">
+                                <i class="ri-file-text-line ri-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Data Collection Report</h4>
+                                <p class="text-sm text-gray-600">Dataset specifications and preprocessing methodology</p>
+                            </div>
+                            <div class="ml-auto">
+                                <button class="flex items-center text-primary hover:text-primary/80 whitespace-nowrap">
+                                    <span>Download</span>
+                                    <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                        <i class="ri-download-line"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg flex items-center">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary">
+                                <i class="ri-file-text-line ri-lg"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Model Architecture Design</h4>
+                                <p class="text-sm text-gray-600">Technical specifications of neural network architecture</p>
+                            </div>
+                            <div class="ml-auto">
+                                <button class="flex items-center text-primary hover:text-primary/80 whitespace-nowrap">
+                                    <span>Download</span>
+                                    <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                        <i class="ri-download-line"></i>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Meeting Minutes</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-medium">Weekly Progress Meeting</h4>
+                                <span class="text-sm text-gray-600">May 1, 2025</span>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-3">Discussion on model optimization techniques and current validation results.</p>
+                            <div class="flex items-center text-sm">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span class="text-gray-600">Attendees: Full Team + Prof. Wilson</span>
+                            </div>
+                            <button class="mt-3 text-primary text-sm hover:text-primary/80 flex items-center">
+                                <span>View Details</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-medium">Technical Review</h4>
+                                <span class="text-sm text-gray-600">April 24, 2025</span>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-3">Deep dive into model architecture and hyperparameter tuning strategies.</p>
+                            <div class="flex items-center text-sm">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span class="text-gray-600">Attendees: Emily, Michael, Prof. Wilson</span>
+                            </div>
+                            <button class="mt-3 text-primary text-sm hover:text-primary/80 flex items-center">
+                                <span>View Details</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-medium">UI/UX Design Review</h4>
+                                <span class="text-sm text-gray-600">April 17, 2025</span>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-3">Review of interface mockups and user workflow designs.</p>
+                            <div class="flex items-center text-sm">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span class="text-gray-600">Attendees: David, Sarah, Dr. Martinez (Radiologist)</span>
+                            </div>
+                            <button class="mt-3 text-primary text-sm hover:text-primary/80 flex items-center">
+                                <span>View Details</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-medium">Data Privacy Compliance</h4>
+                                <span class="text-sm text-gray-600">April 10, 2025</span>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-3">Discussion on HIPAA compliance and data anonymization protocols.</p>
+                            <div class="flex items-center text-sm">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span class="text-gray-600">Attendees: Full Team + Legal Advisor</span>
+                            </div>
+                            <button class="mt-3 text-primary text-sm hover:text-primary/80 flex items-center">
+                                <span>View Details</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-1">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white border border-gray-100 rounded-lg shadow-sm overflow-hidden">
+                <div class="bg-gray-50 px-6 py-4 border-b border-gray-100">
+                    <h3 class="text-xl font-semibold">Research Findings</h3>
+                </div>
+                <div class="p-6">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-medium mb-4">Key Discoveries</h4>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                        <i class="ri-lightbulb-line"></i>
+                                    </div>
+                                    <p>Attention mechanisms significantly improve detection accuracy for small lesions by 23%</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                        <i class="ri-lightbulb-line"></i>
+                                    </div>
+                                    <p>Transfer learning from natural images provides minimal benefit compared to domain-specific pretraining</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                        <i class="ri-lightbulb-line"></i>
+                                    </div>
+                                    <p>Data augmentation techniques specific to medical imaging (contrast adjustment, noise addition) improve robustness</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+                                        <i class="ri-lightbulb-line"></i>
+                                    </div>
+                                    <p>Ensemble methods combining multiple model architectures reduce false positive rate by 17%</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium mb-4">Publications & Citations</h4>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 rounded">
+                                    <h5 class="font-medium">Conference Paper</h5>
+                                    <p class="text-sm text-gray-700 mt-1">"Attention-Enhanced CNN for Pneumonia Detection in Chest X-rays" - Submitted to MICCAI 2025</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded">
+                                    <h5 class="font-medium">Journal Article</h5>
+                                    <p class="text-sm text-gray-700 mt-1">"Explainable AI in Medical Imaging: A Case Study in Radiology" - In preparation for Nature Machine Intelligence</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded">
+                                    <h5 class="font-medium">Technical Report</h5>
+                                    <p class="text-sm text-gray-700 mt-1">"Optimizing CNN Architectures for Resource-Constrained Medical Environments" - School of Computing Technical Report Series</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Resources</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Access project repositories, reference materials, and tools used in our research.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+                        <i class="ri-github-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Project Repositories</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-git-repository-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Model Architecture</h4>
+                                    <p class="text-sm text-gray-600">CNN implementation and training scripts</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-git-repository-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Data Pipeline</h4>
+                                    <p class="text-sm text-gray-600">Data preprocessing and augmentation tools</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-git-repository-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Web Interface</h4>
+                                    <p class="text-sm text-gray-600">Frontend React application</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-git-repository-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Backend API</h4>
+                                    <p class="text-sm text-gray-600">Flask REST API for model serving</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+                        <i class="ri-book-open-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Reference Materials</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-article-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Literature Review</h4>
+                                    <p class="text-sm text-gray-600">Comprehensive review of current research</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-article-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Dataset Documentation</h4>
+                                    <p class="text-sm text-gray-600">Specifications and annotations guide</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-article-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Clinical Guidelines</h4>
+                                    <p class="text-sm text-gray-600">Radiological standards and protocols</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block p-4 bg-gray-50 rounded hover:bg-gray-100 transition">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 flex items-center justify-center text-primary">
+                                    <i class="ri-article-line ri-lg"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Ethics Framework</h4>
+                                    <p class="text-sm text-gray-600">Ethical considerations for AI in healthcare</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+                        <i class="ri-tools-line ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Tools & Technologies</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-50 rounded">
+                            <h4 class="font-medium mb-2">Development Environment</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Python</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">TensorFlow</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">PyTorch</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Jupyter</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">VSCode</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <h4 class="font-medium mb-2">Data Processing</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">NumPy</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Pandas</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">OpenCV</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Scikit-learn</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">DICOM Tools</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <h4 class="font-medium mb-2">Visualization</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Matplotlib</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Seaborn</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Plotly</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">TensorBoard</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Grad-CAM</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-gray-50 rounded">
+                            <h4 class="font-medium mb-2">Deployment</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Docker</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Kubernetes</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">AWS</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Flask</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">React</span>
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section -->
+    <section id="updates" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Project Updates</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Stay informed about our latest progress, achievements, and milestones.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-semibold mb-6">Recent Updates</h3>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                    <i class="ri-code-s-slash-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Model Training Milestone Reached</h4>
+                                    <p class="text-sm text-gray-600">May 2, 2025</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">Our CNN model has achieved 92% accuracy on the validation dataset, surpassing our initial target of 90%. The team has successfully implemented attention mechanisms that significantly improve detection of small lesions.</p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Posted by: Emily Chen</span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                    <i class="ri-presentation-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Mid-Project Review Completed</h4>
+                                    <p class="text-sm text-gray-600">April 28, 2025</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">The team presented current progress to the department faculty and received positive feedback. Prof. Wilson highlighted our novel approach to explainable AI as particularly promising for clinical adoption.</p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Posted by: Michael Rodriguez</span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                    <i class="ri-database-2-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Additional Dataset Acquired</h4>
+                                    <p class="text-sm text-gray-600">April 20, 2025</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">We've secured access to an additional 15,000 annotated chest X-rays from Memorial Hospital, which will significantly enhance our training dataset diversity and help reduce bias in our model.</p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Posted by: Sarah Johnson</span>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-center mb-4">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                                    <i class="ri-layout-line ri-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">UI Prototype Completed</h4>
+                                    <p class="text-sm text-gray-600">April 15, 2025</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">First iteration of the user interface has been completed and tested with two radiologists. Feedback has been incorporated and the design now includes improved visualization of model confidence scores.</p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary mr-1">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Posted by: David Kim</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Project Timeline</h3>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="relative">
+                            <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                            <div class="space-y-8">
+                                <div class="relative pl-10">
+                                    <div class="absolute left-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">
+                                        <i class="ri-check-line ri-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Project Kickoff</h4>
+                                        <p class="text-sm text-gray-600 mt-1">February 10, 2025</p>
+                                        <p class="text-sm text-gray-700 mt-2">Initial planning and team formation</p>
+                                    </div>
+                                </div>
+                                <div class="relative pl-10">
+                                    <div class="absolute left-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">
+                                        <i class="ri-check-line ri-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Requirements Analysis</h4>
+                                        <p class="text-sm text-gray-600 mt-1">February 25, 2025</p>
+                                        <p class="text-sm text-gray-700 mt-2">Stakeholder interviews and requirements gathering</p>
+                                    </div>
+                                </div>
+                                <div class="relative pl-10">
+                                    <div class="absolute left-0 w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white">
+                                        <i class="ri-check-line ri-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Data Collection</h4>
+                                        <p class="text-sm text-gray-600 mt-1">March 15, 2025</p>
+                                        <p class="text-sm text-gray-700 mt-2">Dataset acquisition and preprocessing</p>
+                                    </div>
+                                </div>
+                                <div class="relative pl-10">
+                                    <div class="absolute left-0 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                                        <i class="ri-time-line ri-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Model Development</h4>
+                                        <p class="text-sm text-gray-600 mt-1">April - May 2025</p>
+                                        <p class="text-sm text-gray-700 mt-2">CNN architecture design and training</p>
+                                    </div>
+                                </div>
+                                <div class="relative pl-10">
+                                    <div class="absolute left-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white">
+                                        <i class="ri-time-line ri-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Testing & Validation</h4>
+                                        <p class="text-sm text-gray-600 mt-1">June - July 2025</p>
+                                        <p class="text-sm text-gray-700 mt-2">Performance evaluation and optimization</p>
+                                    </div>
+                                </div>
+                                <div class="relative pl-10">
+                                    <div class="absolute left-0 w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-white">
+                                        <i class="ri-time-line ri-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Deployment</h4>
+                                        <p class="text-sm text-gray-600 mt-1">August 2025</p>
+                                        <p class="text-sm text-gray-700 mt-2">System integration and final delivery</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Project Statistics</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Overall Progress</span>
+                                    <span class="text-sm font-medium text-gray-700">62%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 62%"></div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white p-3 rounded">
+                                    <div class="text-sm text-gray-600">Commits</div>
+                                    <div class="text-2xl font-semibold">247</div>
+                                </div>
+                                <div class="bg-white p-3 rounded">
+                                    <div class="text-sm text-gray-600">Issues Closed</div>
+                                    <div class="text-2xl font-semibold">53</div>
+                                </div>
+                                <div class="bg-white p-3 rounded">
+                                    <div class="text-sm text-gray-600">Team Meetings</div>
+                                    <div class="text-2xl font-semibold">32</div>
+                                </div>
+                                <div class="bg-white p-3 rounded">
+                                    <div class="text-sm text-gray-600">Days Remaining</div>
+                                    <div class="text-2xl font-semibold">120</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Contact Information</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Get in touch with our team members or project mentor for any inquiries or feedback.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Team Members</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex">
+                            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                <i class="ri-user-3-line ri-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Dr. Emily Chen</h4>
+                                <p class="text-sm text-gray-600 mb-2">Project Lead & ML Specialist</p>
+                                <div class="flex items-center text-sm">
+                                    <div class="w-4 h-4 flex items-center justify-center text-primary mr-1">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <a href="mailto:emily.chen@university.edu" class="text-gray-700 hover:text-primary">emily.chen@university.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex">
+                            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                <i class="ri-user-3-line ri-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Michael Rodriguez</h4>
+                                <p class="text-sm text-gray-600 mb-2">Data Scientist</p>
+                                <div class="flex items-center text-sm">
+                                    <div class="w-4 h-4 flex items-center justify-center text-primary mr-1">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <a href="mailto:m.rodriguez@university.edu" class="text-gray-700 hover:text-primary">m.rodriguez@university.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex">
+                            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                <i class="ri-user-3-line ri-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">Sarah Johnson</h4>
+                                <p class="text-sm text-gray-600 mb-2">Backend Developer</p>
+                                <div class="flex items-center text-sm">
+                                    <div class="w-4 h-4 flex items-center justify-center text-primary mr-1">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <a href="mailto:s.johnson@university.edu" class="text-gray-700 hover:text-primary">s.johnson@university.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex">
+                            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                <i class="ri-user-3-line ri-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium">David Kim</h4>
+                                <p class="text-sm text-gray-600 mb-2">UI/UX Designer</p>
+                                <div class="flex items-center text-sm">
+                                    <div class="w-4 h-4 flex items-center justify-center text-primary mr-1">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <a href="mailto:d.kim@university.edu" class="text-gray-700 hover:text-primary">d.kim@university.edu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Project Mentor</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                                <i class="ri-user-star-line ri-2x"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-medium">Prof. James Wilson</h4>
+                                <p class="text-gray-600">Head of AI Research</p>
+                                <p class="text-gray-600">School of Computing and Data Science</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                                <a href="mailto:j.wilson@university.edu" class="text-gray-700 hover:text-primary">j.wilson@university.edu</a>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                    <i class="ri-phone-line"></i>
+                                </div>
+                                <span class="text-gray-700">(555) 123-4567</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+                                <span class="text-gray-700">Davis Building, Room 405</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                    <i class="ri-time-line"></i>
+                                </div>
+                                <span class="text-gray-700">Office Hours: Mon/Wed 2-4 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold mb-6">Department Contact</h3>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h4 class="font-medium mb-4">School of Computing and Data Science</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                        <i class="ri-mail-line"></i>
+                                    </div>
+                                    <a href="mailto:computing@university.edu" class="text-gray-700 hover:text-primary">computing@university.edu</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                        <i class="ri-phone-line"></i>
+                                    </div>
+                                    <span class="text-gray-700">(555) 987-6543</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                        <i class="ri-global-line"></i>
+                                    </div>
+                                    <a href="#" class="text-gray-700 hover:text-primary">www.university.edu/computing</a>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+                                        <i class="ri-map-pin-line"></i>
+                                    </div>
+                                    <span class="text-gray-700">Davis Building, 4th Floor, University Campus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="font-medium mb-4">Send Feedback</h4>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"></textarea>
+                            </div>
+                            <button type="submit" class="bg-primary text-white px-6 py-2 rounded !rounded-button whitespace-nowrap">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-xl font-['Pacifico'] text-white">logo</span>
+                        <span class="text-lg font-semibold">Project Portal</span>
+                    </div>
+                    <p class="text-gray-400">A comprehensive project management and documentation platform for the School of Computing and Data Science.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white">Overview</a></li>
+                        <li><a href="#details" class="text-gray-400 hover:text-white">Project Details</a></li>
+                        <li><a href="#documentation" class="text-gray-400 hover:text-white">Documentation</a></li>
+                        <li><a href="#resources" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="#updates" class="text-gray-400 hover:text-white">Updates</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">University Library</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Computing Resources</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Research Guidelines</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ethics Committee</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Student Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-github-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-mail-fill ri-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-700 rounded-l text-white focus:outline-none focus:ring-2 focus:ring-primary border-none">
+                        <button class="bg-primary px-4 py-2 rounded-r !rounded-button whitespace-nowrap">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 School of Computing and Data Science. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Performance Chart
+            const performanceChart = echarts.init(document.getElementById('performanceChart'));
+            const performanceOption = {
+                animation: false,
+                tooltip: {
+                    trigger: 'axis',
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                legend: {
+                    data: ['Accuracy', 'Precision', 'Recall', 'F1 Score'],
+                    textStyle: {
+                        color: '#1f2937'
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    top: '15%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Initial', 'Week 2', 'Week 4', 'Week 6', 'Week 8', 'Current'],
+                    axisLine: {
+                        lineStyle: {
+                            color: '#1f2937'
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 0.5,
+                    max: 1,
+                    axisLine: {
+                        lineStyle: {
+                            color: '#1f2937'
+                        }
+                    }
+                },
+                series: [
+                    {
+                        name: 'Accuracy',
+                        type: 'line',
+                        smooth: true,
+                        data: [0.72, 0.78, 0.83, 0.87, 0.89, 0.92],
+                        lineStyle: {
+                            width: 3,
+                            color: 'rgba(87, 181, 231, 1)'
+                        },
+                        symbol: 'none',
+                        areaStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: 'rgba(87, 181, 231, 0.2)'
+                                }, {
+                                    offset: 1, color: 'rgba(87, 181, 231, 0)'
+                                }]
+                            }
+                        }
+                    },
+                    {
+                        name: 'Precision',
+                        type: 'line',
+                        smooth: true,
+                        data: [0.68, 0.75, 0.81, 0.85, 0.88, 0.90],
+                        lineStyle: {
+                            width: 3,
+                            color: 'rgba(141, 211, 199, 1)'
+                        },
+                        symbol: 'none',
+                        areaStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: 'rgba(141, 211, 199, 0.2)'
+                                }, {
+                                    offset: 1, color: 'rgba(141, 211, 199, 0)'
+                                }]
+                            }
+                        }
+                    },
+                    {
+                        name: 'Recall',
+                        type: 'line',
+                        smooth: true,
+                        data: [0.65, 0.73, 0.79, 0.84, 0.87, 0.91],
+                        lineStyle: {
+                            width: 3,
+                            color: 'rgba(251, 191, 114, 1)'
+                        },
+                        symbol: 'none',
+                        areaStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: 'rgba(251, 191, 114, 0.2)'
+                                }, {
+                                    offset: 1, color: 'rgba(251, 191, 114, 0)'
+                                }]
+                            }
+                        }
+                    },
+                    {
+                        name: 'F1 Score',
+                        type: 'line',
+                        smooth: true,
+                        data: [0.66, 0.74, 0.80, 0.84, 0.87, 0.90],
+                        lineStyle: {
+                            width: 3,
+                            color: 'rgba(252, 141, 98, 1)'
+                        },
+                        symbol: 'none',
+                        areaStyle: {
+                            color: {
+                                type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                                    offset: 0, color: 'rgba(252, 141, 98, 0.2)'
+                                }, {
+                                    offset: 1, color: 'rgba(252, 141, 98, 0)'
+                                }]
+                            }
+                        }
+                    }
+                ]
+            };
+            performanceChart.setOption(performanceOption);
+
+            // Responsive chart
+            window.addEventListener('resize', function() {
+                performanceChart.resize();
+            });
+        });
+    </script>
+</body>
+</html>
