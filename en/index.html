@@ -29,9 +29,10 @@
     <div class="wrap header-inner">
       <a class="brand" href="./"><svg class="mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="8" fill="#171f3a" stroke="#374878"/><path d="M9.5 9.5v13m0-5.1 7.7-7.9m-4.5 4.8 5.5 8.2m4.2 0V9.5" stroke="#a4b9ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Kai Liu<small>刘 凯</small></span></a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#experience">Internships</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#research">Publications</a>
-        <a href="#siggraph">Kuala Lumpur</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a class="language" href="../" lang="zh-CN" hreflang="zh-CN" aria-label="阅读中文版">中文 <span aria-hidden="true">↗</span></a>
     </div>
@@ -42,9 +43,9 @@
       <div class="hero-copy">
         <h1 id="headline">Kai Liu <span lang="zh-CN">刘凯</span></h1>
         <p class="hero-role">PhD student at The University of Hong Kong</p>
-        <p class="hero-intro">I study multimodal reasoning and group dialogue. During my research internship at miHoYo, I helped develop the barista in <em>Petit Planet</em>.</p>
+        <p class="hero-intro">I study visual reasoning and group dialogue. At miHoYo, I worked on how characters in <em>Petit Planet</em> listen to players, remember conversations, and act in the game.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#experience">Internships <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="#projects">View projects <span aria-hidden="true">↓</span></a>
           <a class="button secondary" href="#research">Publications <span aria-hidden="true">↓</span></a>
         </div>
       </div>
@@ -55,101 +56,96 @@
 
     <section id="experience" class="experience section wrap" aria-labelledby="experience-title">
       <h2 id="experience-title">Internships</h2>
-      <div class="experience-list">
-        <article class="experience-entry">
-          <div>
-            <h3>miHoYo</h3>
-            <p class="experience-role">LLM Research Intern</p>
-          </div>
-          <div>
-            <p>I worked on character memory, coordination between agents, and tool use for NPCs in multiplayer scenes in <em>Petit Planet</em>.</p>
-            <a class="text-link" href="#case">Petit Planet project <span aria-hidden="true">↓</span></a>
-          </div>
-        </article>
-      </div>
+      <ul class="experience-list" role="list">
+        <li class="experience-entry">
+          <strong>miHoYo</strong>
+          <span class="experience-role">LLM Research Intern</span>
+        </li>
+      </ul>
     </section>
 
-    <section id="case" class="case section wrap" aria-labelledby="case-title">
-      <div class="case-grid">
-        <div class="case-copy">
-          <h2 id="case-title">The barista in Petit Planet</h2>
-          <p class="section-lead">At the café, players chat with each other and order coffee. A tricky part of building the barista was deciding who a line was meant for. She can listen while players are chatting among themselves. When someone addresses her, she has to decide whether to answer right away or work out what they mean first.</p>
-          <a class="text-link" href="https://www.miyoushe.com/planet/article/78277356">Official game test announcement (中文) <span aria-hidden="true">↗</span></a>
+    <section id="projects" class="projects section wrap" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected projects</h2>
+      <article id="case" class="case" aria-labelledby="case-title">
+        <div class="case-grid">
+          <div class="case-copy">
+            <p class="project-context">Internship project at miHoYo</p>
+            <h3 id="case-title">The barista in Petit Planet</h3>
+            <p class="section-lead">At the café, players chat with each other and order coffee. A tricky part of building the barista was deciding who a line was meant for. She can listen while players are chatting among themselves. When someone addresses her, she has to decide whether to answer right away or work out what they mean first.</p>
+            <a class="text-link" href="https://www.miyoushe.com/planet/article/78277356">Official game test announcement (中文) <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="demo">
+            <div class="demo-title"><span class="signal" aria-hidden="true"></span><strong>Café · Multiplayer interaction</strong></div>
+            <fieldset class="demo-controls">
+              <legend class="sr-only">Choose a conversation moment</legend>
+              <input class="sr-only" id="demo-listen" type="radio" name="demo-mode" value="listen" aria-controls="moment-listen" checked><label for="demo-listen">Listen</label>
+              <input class="sr-only" id="demo-reply" type="radio" name="demo-mode" value="reply" aria-controls="moment-reply"><label for="demo-reply">Reply</label>
+              <input class="sr-only" id="demo-act" type="radio" name="demo-mode" value="act" aria-controls="moment-act"><label for="demo-act">Make coffee</label>
+              <div class="demo-stage">
+                <div class="moment moment-listen" id="moment-listen">
+                  <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>The stars are bright tonight.</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>Player B</dt><dd>Want to go stargazing later?</dd></div></dl>
+                  <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>Barista · Stays quiet</strong><p>The players are talking to each other. Give them room to finish.</p></div></div>
+                </div>
+                <div class="moment moment-reply" id="moment-reply">
+                  <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>Do you remember what I ordered last time?</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">AI</span>Barista</dt><dd>A hot latte. Would you like another?</dd></div></dl>
+                  <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>The barista replies</strong><p>She recognizes who’s asking and remembers their previous order.</p></div></div>
+                </div>
+                <div class="moment moment-act" id="moment-act">
+                  <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>One latte, please.</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>Player B</dt><dd>Wait, she wants it iced.</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>Right, one iced latte.</dd></div></dl>
+                  <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>The barista makes an iced latte</strong><p>She waits for the player to confirm the order before starting.</p></div></div>
+                </div>
+              </div>
+            </fieldset>
+            <figcaption>Illustrative dialogue.</figcaption>
+          </figure>
         </div>
-        <figure class="demo">
-          <div class="demo-title"><span class="signal" aria-hidden="true"></span><strong>Café · Multiplayer interaction</strong></div>
-          <fieldset class="demo-controls">
-            <legend class="sr-only">Choose a conversation moment</legend>
-            <input class="sr-only" id="demo-listen" type="radio" name="demo-mode" value="listen" aria-controls="moment-listen" checked><label for="demo-listen">Listen</label>
-            <input class="sr-only" id="demo-reply" type="radio" name="demo-mode" value="reply" aria-controls="moment-reply"><label for="demo-reply">Reply</label>
-            <input class="sr-only" id="demo-act" type="radio" name="demo-mode" value="act" aria-controls="moment-act"><label for="demo-act">Make coffee</label>
-            <div class="demo-stage">
-              <div class="moment moment-listen" id="moment-listen">
-                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>The stars are bright tonight.</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>Player B</dt><dd>Want to go stargazing later?</dd></div></dl>
-                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>Barista · Stays quiet</strong><p>The players are talking to each other. Give them room to finish.</p></div></div>
-              </div>
-              <div class="moment moment-reply" id="moment-reply">
-                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>Do you remember what I ordered last time?</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">AI</span>Barista</dt><dd>A hot latte. Would you like another?</dd></div></dl>
-                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>The barista replies</strong><p>She recognizes who’s asking and remembers their previous order.</p></div></div>
-              </div>
-              <div class="moment moment-act" id="moment-act">
-                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>One latte, please.</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>Player B</dt><dd>Wait, she wants it iced.</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">A</span>Player A</dt><dd>Right, one iced latte.</dd></div></dl>
-                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>The barista makes an iced latte</strong><p>She waits for the player to confirm the order before starting.</p></div></div>
-              </div>
-            </div>
-          </fieldset>
-          <figcaption>Illustrative dialogue.</figcaption>
-        </figure>
-      </div>
-      <div class="contributions">
-        <article><h3>Character memory</h3><p>I worked on what the character can recall during a conversation and when a player comes back later.</p></article>
-        <article><h3>Group dialogue</h3><p>I worked on intent recognition and turn-taking, including model training and reinforcement learning. That covers decisions like who’s talking to the barista and when she needs more time to respond.</p></article>
-        <article><h3>In-game actions</h3><p>I worked on tool use. When the barista understands an order, she still has to make the drink in the game.</p></article>
+        <div class="contributions">
+          <article><h4>Character memory</h4><p>I worked on what the character can recall during a conversation and when a player comes back later.</p></article>
+          <article><h4>Group dialogue</h4><p>I worked on intent recognition and turn-taking, including model training and reinforcement learning. That covers decisions like who’s talking to the barista and when she needs more time to respond.</p></article>
+          <article><h4>In-game actions</h4><p>I worked on tool use. When the barista understands an order, she still has to make the drink in the game.</p></article>
+        </div>
+      </article>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-context">Research project · Co-author</p>
+          <h3>ProReason</h3>
+          <p class="project-summary">The model looks for visual details relevant to a question, then uses that evidence to answer.</p>
+          <div class="project-links"><a class="text-link" href="https://github.com/lian-tian-mo-zun/Pro_Reason" aria-label="View code · ProReason">View code <span aria-hidden="true">↗</span></a> <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" aria-label="Paper · ProReason">Paper <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card">
+          <p class="project-context">Research project · Co-author</p>
+          <h3>Group dialogue modeling</h3>
+          <p class="project-summary">We studied how a model can track multiple speakers and changes in participant state in cognitive stimulation dialogues.</p>
+          <div class="project-links"><a class="text-link" href="https://arxiv.org/abs/2603.10034" aria-label="Read preprint · Group dialogue modeling">Read preprint <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card">
+          <p class="project-context">Course project · Android</p>
+          <h3>SimpleNote</h3>
+          <p class="project-summary">A note-taking prototype in Java that organizes notes into section groups and sections.</p>
+          <div class="project-links"><a class="text-link" href="https://github.com/geekanhongdou/SimpleNote" aria-label="View code · SimpleNote">View code <span aria-hidden="true">↗</span></a></div>
+        </article>
       </div>
     </section>
 
     <section id="research" class="research section" aria-labelledby="research-title">
       <div class="wrap">
         <h2 id="research-title">Publications</h2>
-        <p class="section-lead">My recent work looks at visual reasoning and group dialogue. I’m also interested in how language models can help analyze biological data and reason about physical systems.</p>
-        <div class="publications">
-          <article class="paper">
-            <div class="paper-meta"><span class="venue">EMNLP 2025</span><span>Co-author</span></div>
-            <h3 lang="en">ProReason: Multi-Modal Proactive Reasoning with Decoupled Eyesight and Wisdom</h3>
-            <p>Separates active visual evidence gathering from language reasoning so a model can seek out missing visual details before answering.</p>
-            <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" aria-label="Read paper · EMNLP 2025">Read paper <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="paper">
-            <div class="paper-meta"><span class="venue">AAAI 2026</span><span>Co-author</span></div>
-            <h3 lang="en">A Principle-Driven Adaptive Policy for Group Cognitive Stimulation Dialogue for Elderly with Cognitive Impairment</h3>
-            <p>Models speaker context and changes in participant state for group dialogue in a cognitive stimulation research setting.</p>
-            <a class="text-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/40393" aria-label="Read paper · AAAI 2026">Read paper <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
+        <ul class="publication-list" role="list">
+          <li>
+            <span class="venue">AAAI 2026</span>
+            <a class="text-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/40393" lang="en">A Principle-Driven Adaptive Policy for Group Cognitive Stimulation Dialogue for Elderly with Cognitive Impairment <span aria-hidden="true">↗</span></a>
+          </li>
+          <li>
+            <span class="venue">EMNLP 2025</span>
+            <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" lang="en">ProReason: Multi-Modal Proactive Reasoning with Decoupled Eyesight and Wisdom <span aria-hidden="true">↗</span></a>
+          </li>
+        </ul>
         <p class="submission">Other papers on applied language models are under review.</p>
-      </div>
-    </section>
-
-    <section id="siggraph" class="event section wrap" aria-labelledby="event-title">
-      <div class="event-panel">
-        <div class="event-copy">
-          <h2 id="event-title">SIGGRAPH Asia 2026</h2>
-          <p class="section-lead">I’d like to talk with Tencent Games about multiplayer interactions at the December 3 dinner. Two workshop talks touch on questions I ran into while working on <em>Petit Planet</em>.</p>
-          <div class="event-links">
-            <a class="button primary" href="mailto:u3638070@connect.hku.hk?subject=SIGGRAPH%20Asia%202026%20%7C%20Kai%20Liu">Get in touch <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://719057650821627934.runtime.meizhandian.com/">Tencent Games workshop agenda <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div class="event-topics">
-          <p class="event-date"><span class="signal" aria-hidden="true"></span>Dec 2 · Kuala Lumpur Convention Centre · MR 302/303</p>
-          <article><p class="session-time">11:25 · Visual world models</p><h3>What should a character remember when the scene changes?</h3><p>Which details should carry over, and which should be updated as players speak and the scene changes?</p></article>
-          <article><p class="session-time">14:00 · Playable generative worlds</p><h3>What happens after a player orders a coffee?</h3><p>I’d like to discuss when a character should ask a follow-up and how it can carry out the request within the rules of the game.</p></article>
-        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer id="contact" class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-brand"><strong>Kai Liu <span lang="zh-CN">刘凯</span></strong></div>
       <div class="footer-links">

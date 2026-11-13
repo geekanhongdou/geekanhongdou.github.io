@@ -29,9 +29,10 @@
     <div class="wrap header-inner">
       <a class="brand" href="./"><svg class="mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="8" fill="#171f3a" stroke="#374878"/><path d="M9.5 9.5v13m0-5.1 7.7-7.9m-4.5 4.8 5.5 8.2m4.2 0V9.5" stroke="#a4b9ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>刘凯<small>KAI LIU</small></span></a>
       <nav class="nav" aria-label="主导航">
-        <a href="#experience">实习经历</a>
+        <a href="#experience">实习</a>
+        <a href="#projects">项目</a>
         <a href="#research">论文</a>
-        <a href="#siggraph">吉隆坡交流</a>
+        <a href="#contact">联系</a>
       </nav>
       <a class="language" href="en/" lang="en" hreflang="en" aria-label="Read in English">EN <span aria-hidden="true">↗</span></a>
     </div>
@@ -42,9 +43,9 @@
       <div class="hero-copy">
         <h1 id="headline">刘凯 <span lang="en">Kai Liu</span></h1>
         <p class="hero-role">香港大学博士生</p>
-        <p class="hero-intro">我研究多模态推理和多人对话。之前在米哈游做研究实习，参与了《星布谷地》里咖啡师娜洛的开发。</p>
+        <p class="hero-intro">我主要研究视觉推理和多人对话。之前在米哈游参与《星布谷地》的开发，做的是多人游戏里角色怎么听懂玩家、记住对话和执行动作。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#experience">实习经历 <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="#projects">看项目 <span aria-hidden="true">↓</span></a>
           <a class="button secondary" href="#research">论文 <span aria-hidden="true">↓</span></a>
         </div>
       </div>
@@ -55,101 +56,96 @@
 
     <section id="experience" class="experience section wrap" aria-labelledby="experience-title">
       <h2 id="experience-title">实习经历</h2>
-      <div class="experience-list">
-        <article class="experience-entry">
-          <div>
-            <h3>米哈游</h3>
-            <p class="experience-role">大模型研究员实习</p>
-          </div>
-          <div>
-            <p>负责《星布谷地》多人场景里 NPC 的角色记忆、多智能体协作和工具调用。</p>
-            <a class="text-link" href="#case">《星布谷地》项目 <span aria-hidden="true">↓</span></a>
-          </div>
-        </article>
-      </div>
+      <ul class="experience-list" role="list">
+        <li class="experience-entry">
+          <strong>米哈游</strong>
+          <span class="experience-role">大模型研究员实习</span>
+        </li>
+      </ul>
     </section>
 
-    <section id="case" class="case section wrap" aria-labelledby="case-title">
-      <div class="case-grid">
-        <div class="case-copy">
-          <h2 id="case-title">《星布谷地》的咖啡师娜洛</h2>
-          <p class="section-lead">在「野咖啡」，玩家会一边聊天，一边跟娜洛点单。做这个角色时，一个难点是判断这句话在对谁说。聊得正热闹时，娜洛可以先听着。有人叫她时，她要判断是直接接话，还是先弄清楚对方的意思。</p>
-          <a class="text-link" href="https://www.miyoushe.com/planet/article/78277356">米游社官方测试公告 <span aria-hidden="true">↗</span></a>
+    <section id="projects" class="projects section wrap" aria-labelledby="projects-title">
+      <h2 id="projects-title">代表项目</h2>
+      <article id="case" class="case" aria-labelledby="case-title">
+        <div class="case-grid">
+          <div class="case-copy">
+            <p class="project-context">米哈游实习项目</p>
+            <h3 id="case-title">《星布谷地》的咖啡师娜洛</h3>
+            <p class="section-lead">在「野咖啡」，玩家会一边聊天，一边跟娜洛点单。做这个角色时，一个难点是判断这句话在对谁说。聊得正热闹时，娜洛可以先听着。有人叫她时，她要判断是直接接话，还是先弄清楚对方的意思。</p>
+            <a class="text-link" href="https://www.miyoushe.com/planet/article/78277356">米游社官方测试公告 <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="demo">
+            <div class="demo-title"><span class="signal" aria-hidden="true"></span><strong>野咖啡 · 多人互动</strong></div>
+            <fieldset class="demo-controls">
+              <legend class="sr-only">切换交互场景</legend>
+              <input class="sr-only" id="demo-listen" type="radio" name="demo-mode" value="listen" aria-controls="moment-listen" checked><label for="demo-listen">旁听</label>
+              <input class="sr-only" id="demo-reply" type="radio" name="demo-mode" value="reply" aria-controls="moment-reply"><label for="demo-reply">接话</label>
+              <input class="sr-only" id="demo-act" type="radio" name="demo-mode" value="act" aria-controls="moment-act"><label for="demo-act">做咖啡</label>
+              <div class="demo-stage">
+                <div class="moment moment-listen" id="moment-listen">
+                  <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>今天星星真亮。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>玩家 B</dt><dd>要不等会儿一起去看？</dd></div></dl>
+                  <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛 · 保持旁听</strong><p>玩家正在彼此交谈，让他们把话说完。</p></div></div>
+                </div>
+                <div class="moment moment-reply" id="moment-reply">
+                  <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>娜洛，还记得我上次点什么吗？</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">AI</span>娜洛</dt><dd>热拿铁。今天也来一杯吗？</dd></div></dl>
+                  <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛接话</strong><p>她认出了在问她的玩家，也记得上次的订单。</p></div></div>
+                </div>
+                <div class="moment moment-act" id="moment-act">
+                  <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>娜洛，来一杯拿铁。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>玩家 B</dt><dd>等等，她想喝冰的。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>对，一杯冰拿铁。</dd></div></dl>
+                  <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛做了一杯冰拿铁</strong><p>她等玩家确认了冷热，再开始做。</p></div></div>
+                </div>
+              </div>
+            </fieldset>
+            <figcaption>对话为情境示例。</figcaption>
+          </figure>
         </div>
-        <figure class="demo">
-          <div class="demo-title"><span class="signal" aria-hidden="true"></span><strong>野咖啡 · 多人互动</strong></div>
-          <fieldset class="demo-controls">
-            <legend class="sr-only">切换交互场景</legend>
-            <input class="sr-only" id="demo-listen" type="radio" name="demo-mode" value="listen" aria-controls="moment-listen" checked><label for="demo-listen">旁听</label>
-            <input class="sr-only" id="demo-reply" type="radio" name="demo-mode" value="reply" aria-controls="moment-reply"><label for="demo-reply">接话</label>
-            <input class="sr-only" id="demo-act" type="radio" name="demo-mode" value="act" aria-controls="moment-act"><label for="demo-act">做咖啡</label>
-            <div class="demo-stage">
-              <div class="moment moment-listen" id="moment-listen">
-                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>今天星星真亮。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>玩家 B</dt><dd>要不等会儿一起去看？</dd></div></dl>
-                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛 · 保持旁听</strong><p>玩家正在彼此交谈，让他们把话说完。</p></div></div>
-              </div>
-              <div class="moment moment-reply" id="moment-reply">
-                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>娜洛，还记得我上次点什么吗？</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">AI</span>娜洛</dt><dd>热拿铁。今天也来一杯吗？</dd></div></dl>
-                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛接话</strong><p>她认出了在问她的玩家，也记得上次的订单。</p></div></div>
-              </div>
-              <div class="moment moment-act" id="moment-act">
-                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>娜洛，来一杯拿铁。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>玩家 B</dt><dd>等等，她想喝冰的。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>对，一杯冰拿铁。</dd></div></dl>
-                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛做了一杯冰拿铁</strong><p>她等玩家确认了冷热，再开始做。</p></div></div>
-              </div>
-            </div>
-          </fieldset>
-          <figcaption>对话为情境示例。</figcaption>
-        </figure>
-      </div>
-      <div class="contributions">
-        <article><h3>角色记忆</h3><p>我做的是角色如何接上前几轮对话，以及玩家下次再来时能记得哪些事。</p></article>
-        <article><h3>多人对话</h3><p>我参与了意图识别和发言策略的工作，涉及模型训练与强化学习。比如判断谁在叫娜洛，什么时候值得多想一下。</p></article>
-        <article><h3>游戏内动作</h3><p>我负责工具调用相关工作。像点咖啡这样的请求，角色听懂以后还要在游戏里把它做出来。</p></article>
+        <div class="contributions">
+          <article><h4>角色记忆</h4><p>我做的是角色如何接上前几轮对话，以及玩家下次再来时能记得哪些事。</p></article>
+          <article><h4>多人对话</h4><p>我参与了意图识别和发言策略的工作，涉及模型训练与强化学习。比如判断谁在叫娜洛，什么时候值得多想一下。</p></article>
+          <article><h4>游戏内动作</h4><p>我负责工具调用相关工作。像点咖啡这样的请求，角色听懂以后还要在游戏里把它做出来。</p></article>
+        </div>
+      </article>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-context">研究项目 · 共同作者</p>
+          <h3>ProReason</h3>
+          <p class="project-summary">模型答题前可以先按问题去找缺少的视觉线索，再用找到的证据作答。</p>
+          <div class="project-links"><a class="text-link" href="https://github.com/lian-tian-mo-zun/Pro_Reason" aria-label="查看代码 · ProReason">查看代码 <span aria-hidden="true">↗</span></a> <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" aria-label="论文 · ProReason">论文 <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card">
+          <p class="project-context">研究项目 · 共同作者</p>
+          <h3>多人对话建模</h3>
+          <p class="project-summary">在认知刺激的群体对话场景里，研究如何跟住不同发言者的上下文，以及参与者状态的变化。</p>
+          <div class="project-links"><a class="text-link" href="https://arxiv.org/abs/2603.10034" aria-label="论文预印本 · 多人对话建模">论文预印本 <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project-card">
+          <p class="project-context">课程项目 · Android</p>
+          <h3>SimpleNote</h3>
+          <p class="project-summary">用 Java 做的笔记应用原型，可以用分组和分区整理笔记。</p>
+          <div class="project-links"><a class="text-link" href="https://github.com/geekanhongdou/SimpleNote" aria-label="查看代码 · SimpleNote">查看代码 <span aria-hidden="true">↗</span></a></div>
+        </article>
       </div>
     </section>
 
     <section id="research" class="research section" aria-labelledby="research-title">
       <div class="wrap">
         <h2 id="research-title">论文</h2>
-        <p class="section-lead">最近的工作主要做视觉推理和多人对话。我也关注大模型在生物数据分析和物理推理中的应用。</p>
-        <div class="publications">
-          <article class="paper">
-            <div class="paper-meta"><span class="venue">EMNLP 2025</span><span>共同作者</span></div>
-            <h3 lang="en">ProReason: Multi-Modal Proactive Reasoning with Decoupled Eyesight and Wisdom</h3>
-            <p>把主动获取视觉线索和语言推理分开，让模型在作答前先补足缺失的图像证据。</p>
-            <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" aria-label="查看论文 · EMNLP 2025">查看论文 <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="paper">
-            <div class="paper-meta"><span class="venue">AAAI 2026</span><span>共同作者</span></div>
-            <h3 lang="en">A Principle-Driven Adaptive Policy for Group Cognitive Stimulation Dialogue for Elderly with Cognitive Impairment</h3>
-            <p>面向认知刺激场景的多人对话研究，处理多位发言者的上下文和参与者状态变化。</p>
-            <a class="text-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/40393" aria-label="查看论文 · AAAI 2026">查看论文 <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
+        <ul class="publication-list" role="list">
+          <li>
+            <span class="venue">AAAI 2026</span>
+            <a class="text-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/40393" lang="en">A Principle-Driven Adaptive Policy for Group Cognitive Stimulation Dialogue for Elderly with Cognitive Impairment <span aria-hidden="true">↗</span></a>
+          </li>
+          <li>
+            <span class="venue">EMNLP 2025</span>
+            <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" lang="en">ProReason: Multi-Modal Proactive Reasoning with Decoupled Eyesight and Wisdom <span aria-hidden="true">↗</span></a>
+          </li>
+        </ul>
         <p class="submission">另有大模型应用方向的论文在投。</p>
-      </div>
-    </section>
-
-    <section id="siggraph" class="event section wrap" aria-labelledby="event-title">
-      <div class="event-panel">
-        <div class="event-copy">
-          <h2 id="event-title">SIGGRAPH Asia 2026</h2>
-          <p class="section-lead">希望有机会在 12 月 3 日的晚宴上和腾讯游戏团队聊聊游戏里的多人互动。Workshop 有两场报告和我在《星布谷地》遇到的问题很接近。</p>
-          <div class="event-links">
-            <a class="button primary" href="mailto:u3638070@connect.hku.hk?subject=SIGGRAPH%20Asia%202026%20%7C%20Kai%20Liu">邮件交流 <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="https://719057650821627934.runtime.meizhandian.com/">查看腾讯游戏 Workshop 议程 <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div class="event-topics">
-          <p class="event-date"><span class="signal" aria-hidden="true"></span>12 月 2 日 · 吉隆坡会议中心 · MR 302/303</p>
-          <article><p class="session-time">11:25 · 视觉世界模型</p><h3>场景变了，角色该记住什么？</h3><p>玩家说过的话、已经发生的事、角色自己的推测，哪些该保留，哪些该随场景更新？</p></article>
-          <article><p class="session-time">14:00 · 可玩的生成世界</p><h3>玩家说「来杯咖啡」，接下来会发生什么？</h3><p>我想聊聊什么时候该追问，以及怎么让角色按游戏里的规则完成请求。</p></article>
-        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer id="contact" class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-brand"><strong>刘凯 <span>Kai Liu</span></strong></div>
       <div class="footer-links">
