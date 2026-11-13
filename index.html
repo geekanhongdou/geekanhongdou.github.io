@@ -1,46 +1,167 @@
----
-layout: page
-description: "「离开世界之前 一切都是过程」"
----
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c101d">
+  <title>刘凯 Kai Liu｜香港大学博士生 · 游戏 AI 与大模型应用</title>
+  <meta name="description" content="刘凯，香港大学博士生，曾任米哈游大模型研究员实习生，负责《星布谷地》AI NPC 的核心记忆、多智能体协作与工具调用。研究聚焦游戏智能体与多模态推理。">
+  <link rel="canonical" href="https://geekanhongdou.github.io/">
+  <link rel="alternate" hreflang="zh-CN" href="https://geekanhongdou.github.io/">
+  <link rel="alternate" hreflang="en" href="https://geekanhongdou.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://geekanhongdou.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="刘凯 Kai Liu｜香港大学博士生 · 游戏 AI 与大模型应用">
+  <meta property="og:description" content="刘凯，香港大学博士生，曾任米哈游大模型研究员实习生，负责《星布谷地》AI NPC 的核心记忆、多智能体协作与工具调用。研究聚焦游戏智能体与多模态推理。">
+  <meta property="og:url" content="https://geekanhongdou.github.io/">
+  <meta property="og:image" content="https://geekanhongdou.github.io/assets/profile/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="刘凯 · 香港大学博士生 · 游戏 AI 与大模型应用">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="./assets/profile/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/profile/portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./"><svg class="mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="8" fill="#171f3a" stroke="#374878"/><path d="M9.5 9.5v13m0-5.1 7.7-7.9m-4.5 4.8 5.5 8.2m4.2 0V9.5" stroke="#a4b9ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>刘凯<small>KAI LIU</small></span></a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#case">项目经历</a>
+        <a href="#research">研究成果</a>
+        <a href="#siggraph">吉隆坡交流</a>
+      </nav>
+      <a class="language" href="en/" lang="en" hreflang="en" aria-label="Read in English">EN <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="headline">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> APPLIED LLM RESEARCH <span class="eyebrow-slash">/</span> GAME AI</p>
+        <ul class="identity" role="list"><li>香港大学博士生</li><li>米哈游大模型研究员实习</li></ul>
+        <h1 id="headline">让游戏角色<br><em>知道何时开口。</em></h1>
+        <p class="hero-intro">我是<strong>刘凯</strong>。在米哈游《星布谷地》，我负责 AI NPC 的核心记忆、多智能体协作与工具调用。我的研究聚焦大模型智能体如何在多人对话中理解语境、把握时机，并在游戏世界里行动。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#case">看《星布谷地》案例 <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="#research">查看公开论文 <span aria-hidden="true">↓</span></a>
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+      </div>
+      <figure class="hero-figure">
+        <img src="./assets/profile/orbit.svg" width="552" height="440" alt="" fetchpriority="high">
+        <figcaption>图 01 / 游戏智能体能力示意</figcaption>
+      </figure>
+    </section>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+    <dl class="proof wrap">
+      <div class="proof-item">
+        <span class="proof-index" aria-hidden="true">01</span>
+        <div><dt>教育背景</dt><dd><strong>香港大学</strong><span>博士研究</span></dd></div>
+      </div>
+      <div class="proof-item">
+        <span class="proof-index" aria-hidden="true">02</span>
+        <div><dt>游戏项目</dt><dd><strong>米哈游《星布谷地》</strong><span>多人 AI NPC</span></dd></div>
+      </div>
+      <div class="proof-item">
+        <span class="proof-index" aria-hidden="true">03</span>
+        <div><dt>公开论文</dt><dd><strong>EMNLP 2025 · AAAI 2026</strong><span>共同作者</span></dd></div>
+      </div>
+    </dl>
+
+    <section id="case" class="case section wrap" aria-labelledby="case-title">
+      <p class="eyebrow section-index">01 / INDUSTRY RESEARCH</p>
+      <div class="case-grid">
+        <div class="case-copy">
+          <h2 id="case-title">一个 AI，<br>走进一群人的对话。</h2>
+          <ul class="tags" role="list"><li>米哈游</li><li>大模型研究员实习</li><li>《星布谷地》</li></ul>
+          <p class="section-lead">在「野咖啡」，多位真人玩家和 AI 咖啡师<strong>娜洛</strong>同处一桌。她要判断玩家是在彼此聊天，还是在叫她；是该快速接话、花时间判断，还是保持沉默。玩家真要点单时，她还得在游戏里把咖啡做出来。</p>
+          <a class="text-link" href="https://www.miyoushe.com/planet/article/78277356">米游社官方测试公告 <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="demo">
+          <div class="demo-title"><span class="signal" aria-hidden="true"></span><strong>野咖啡 · 多人互动</strong><span class="demo-badge">情境示意</span></div>
+          <fieldset class="demo-controls">
+            <legend class="sr-only">切换交互场景</legend>
+            <input class="sr-only" id="demo-listen" type="radio" name="demo-mode" value="listen" aria-controls="moment-listen" checked><label for="demo-listen">01 旁听</label>
+            <input class="sr-only" id="demo-reply" type="radio" name="demo-mode" value="reply" aria-controls="moment-reply"><label for="demo-reply">02 接话</label>
+            <input class="sr-only" id="demo-act" type="radio" name="demo-mode" value="act" aria-controls="moment-act"><label for="demo-act">03 行动</label>
+            <div class="demo-stage">
+              <div class="moment moment-listen" id="moment-listen">
+                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>今天星星真亮。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>玩家 B</dt><dd>要不等会儿一起去看？</dd></div></dl>
+                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛 · 保持旁听</strong><p>玩家正在彼此交谈，让他们把话说完。</p></div></div>
+              </div>
+              <div class="moment moment-reply" id="moment-reply">
+                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>娜洛，还记得我上次点什么吗？</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">AI</span>娜洛</dt><dd>热拿铁。今天也来一杯吗？</dd></div></dl>
+                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛 · 接续对话</strong><p>识别到玩家在和她说话，再结合以往的互动回应。</p></div></div>
+              </div>
+              <div class="moment moment-act" id="moment-act">
+                <dl class="dialogue"><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>娜洛，来一杯拿铁。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">B</span>玩家 B</dt><dd>等等，她想喝冰的。</dd></div><div><dt><span class="speaker-icon" aria-hidden="true">A</span>玩家 A</dt><dd>对，一杯冰拿铁。</dd></div></dl>
+                <div class="decision"><span class="decision-icon" aria-hidden="true">↳</span><div><strong>娜洛 · 执行制作</strong><p>等到订单明确，把对话里的请求变成游戏内的动作。</p></div></div>
+              </div>
+            </div>
+          </fieldset>
+          <figcaption>虚构对话，用来说明交互问题；非游戏实录。</figcaption>
+        </figure>
+      </div>
+      <div class="contributions">
+        <article><p class="micro">01 / MEMORY</p><h3>让角色记得玩家</h3><p>负责核心记忆相关工作，让角色能接续多轮上下文，玩家回来时也有机会延续上一次的互动。</p></article>
+        <article><p class="micro">02 / DECISION</p><h3>让角色把握发言时机</h3><p>围绕多人意图识别、多智能体协作与发言决策开展工作，涉及模型训练和强化学习；在快速回应与深入推理之间取舍。</p></article>
+        <article><p class="micro">03 / ACTION</p><h3>让对话变成游戏动作</h3><p>负责工具调用相关工作，让角色能识别玩家意图，在游戏里执行相应动作，例如做一杯咖啡。</p></article>
+      </div>
+    </section>
+
+    <section id="research" class="research section" aria-labelledby="research-title">
+      <div class="wrap">
+        <p class="eyebrow section-index">02 / SELECTED RESEARCH</p>
+        <h2 id="research-title">从看懂场景，到跟上对话。</h2>
+        <p class="section-lead">我研究大模型如何利用上下文作出判断，并把它用在游戏智能体、多模态推理和群体对话中。我也关注大模型在生物数据理解和物理约束推理中的应用。</p>
+        <div class="publications">
+          <article class="paper">
+            <div class="paper-meta"><span class="venue">EMNLP 2025</span><span>共同作者</span></div>
+            <h3 lang="en">ProReason: Multi-Modal Proactive Reasoning with Decoupled Eyesight and Wisdom</h3>
+            <p>把主动获取视觉线索和语言推理分开，让模型在作答前先补足缺失的图像证据。</p>
+            <a class="text-link" href="https://aclanthology.org/2025.emnlp-main.1614/" aria-label="查看论文 · EMNLP 2025">查看论文 <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="paper">
+            <div class="paper-meta"><span class="venue">AAAI 2026</span><span>共同作者</span></div>
+            <h3 lang="en">A Principle-Driven Adaptive Policy for Group Cognitive Stimulation Dialogue for Elderly with Cognitive Impairment</h3>
+            <p>面向认知刺激场景的多人对话研究，处理多位发言者的上下文和参与者状态变化。</p>
+            <a class="text-link" href="https://ojs.aaai.org/index.php/AAAI/article/view/40393" aria-label="查看论文 · AAAI 2026">查看论文 <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="submission"><span>在投</span>大模型应用方向另有稿件已提交审稿。</p>
+      </div>
+    </section>
+
+    <section id="siggraph" class="event section wrap" aria-labelledby="event-title">
+      <div class="event-panel">
+        <div class="event-copy">
+          <p class="eyebrow section-index">03 / SIGGRAPH ASIA 2026</p>
+          <h2 id="event-title">想在吉隆坡聊的两个问题。</h2>
+          <p class="section-lead">从《星布谷地》的多人交互出发，我希望有机会在 12 月 3 日晚宴和腾讯游戏团队交流：角色如何在不断变化的世界里保持记忆，又怎样把自然语言变成符合玩法规则的动作。</p>
+          <div class="event-links">
+            <a class="button primary" href="mailto:u3638070@connect.hku.hk?subject=SIGGRAPH%20Asia%202026%20%7C%20Kai%20Liu">邮件交流 <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://719057650821627934.runtime.meizhandian.com/">查看腾讯游戏 Workshop 议程 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="event-topics">
+          <p class="event-date"><span class="signal" aria-hidden="true"></span>12 月 2 日 · 吉隆坡会议中心 · MR 302/303</p>
+          <article><p class="micro">11:25 / VISUAL WORLD MODELS</p><h3>场景变了，角色该记住什么？</h3><p>场景会变，玩家偏好也会变。角色记忆该如何区分世界里的事实、玩家说过的话，以及模型自己的推断？</p></article>
+          <article><p class="micro">14:00 / PLAYABLE GENERATIVE WORLDS</p><h3>一句话，怎么变成可信的游戏动作？</h3><p>从一句「来杯咖啡」出发，聊聊智能体何时该先澄清，以及怎样确保它执行的动作始终符合当前场景和游戏规则。</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand"><svg class="mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="8" fill="#171f3a" stroke="#374878"/><path d="M9.5 9.5v13m0-5.1 7.7-7.9m-4.5 4.8 5.5 8.2m4.2 0V9.5" stroke="#a4b9ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><div><strong>刘凯 <span>KAI LIU</span></strong><p>游戏 AI · 多模态推理 · 大模型应用</p></div></div>
+      <div class="footer-links">
+        <a href="mailto:u3638070@connect.hku.hk">u3638070@connect.hku.hk</a>
+        <a href="https://github.com/geekanhongdou">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,11 +1,11 @@
 # Site settings
-title: Kai Liu Blog u3638070@connect.hku.hk
-SEOTitle: 刘凯的博客 | Kai Liu Blog u3638070@connect.hku.hk
+title: 刘凯 | Kai Liu
+SEOTitle: 刘凯 | Kai Liu
 header-img: img/home-bg.jpg
 email: u3638070@connect.hku.hk
-description: "这里是 @刘凯 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
-keyword: "刘凯, u3638070@connect.hku.hk, 博客, 个人网站, 互联网, LLM, VLLM, Agent, docker"
-url: "https://geekanhongdou.github.io/" # your host, for absolute URL
+description: "刘凯，香港大学博士生，研究游戏智能体、多模态推理与大模型应用。"
+keyword: "刘凯, Kai Liu, HKU, 米哈游, 游戏 AI, AI NPC, LLM, agents"
+url: "https://geekanhongdou.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -15,7 +15,7 @@ future: true
 RSS: false
 weibo_username: null
 zhihu_username: null
-github_username: null
+github_username: geekanhongdou
 twitter_username: null
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
@@ -24,7 +24,6 @@ twitter_username: null
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
 exclude:
   [
     "less",
@@ -37,12 +36,6 @@ exclude:
 anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 #timezone: CN
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
-# `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
 
 # Markdown settings
 # replace redcarpet to kramdown,
@@ -59,7 +52,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: hux
+disqus_username: null
 
 # Netease settings
 netease_comment: false
@@ -69,13 +62,12 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: null
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "香港大学博士生 · 游戏 AI 与大模型应用"
+sidebar-avatar: null
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
@@ -83,7 +75,7 @@ featured-condition-size: 1 # A tag will be featured if the size of it is more th
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
-service-worker: true
+service-worker: false
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
