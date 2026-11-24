@@ -1,121 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f9faf7">
-  <title>Kai Liu | The University of Hong Kong</title>
-  <meta name="description" content="Kai Liu is a PhD student at The University of Hong Kong studying game agents and interactive world models. His work at miHoYo included multiplayer NPCs and language model training.">
-  <link rel="canonical" href="https://geekanhongdou.github.io/en/">
-  <link rel="alternate" hreflang="zh-CN" href="https://geekanhongdou.github.io/">
-  <link rel="alternate" hreflang="en" href="https://geekanhongdou.github.io/en/">
-  <link rel="alternate" hreflang="x-default" href="https://geekanhongdou.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Kai Liu | The University of Hong Kong">
-  <meta property="og:description" content="Kai Liu is a PhD student at The University of Hong Kong studying game agents and interactive world models. His work at miHoYo included multiplayer NPCs and language model training.">
-  <meta property="og:url" content="https://geekanhongdou.github.io/en/">
-  <link rel="icon" href="../assets/profile/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../assets/profile/portfolio.css">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url=../">
+  <link rel="canonical" href="https://geekanhongdou.github.io/">
+  <title>刘jesen凯 · 主页</title>
 </head>
-<body id="top">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top"><span class="monogram" aria-hidden="true">KL</span><span class="brand-name">Research portfolio</span></a>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#manuscripts">Papers</a>
-      </nav>
-      <a class="language" href="../index.html" hreflang="zh-CN" lang="zh-CN" aria-label="阅读中文版">中文</a>
-    </div>
-  </header>
-  <div class="wrap page-grid">
-    <aside class="profile" aria-label="Profile">
-      <div class="identity">
-        <h1 id="headline">Kai <em>Liu</em></h1>
-        <p class="roman-name" lang="zh-CN">刘jesen凯</p>
-      </div>
-      <div class="degrees">
-        <p>PhD student, The University of Hong Kong</p>
-        <p>MSc in Computer Science, HKU</p>
-      </div>
-      <p class="research-label">Research focus</p>
-      <p class="research-focus">Game agents and<br>interactive world models</p>
-      <div id="contact" class="profile-links"><a href="mailto:u3638070@connect.hku.hk">u3638070@connect.hku.hk</a></div>
-    </aside>
-    <main id="main" class="content" tabindex="-1">
-      <section class="section intro" aria-labelledby="about-title">
-        <header class="section-heading"><h2 id="about-title">About me</h2></header>
-        <div class="intro-copy">
-          <p>I’m a PhD student at The University of Hong Kong studying how characters interact with players. At miHoYo, I contributed to in-house language model pretraining, post-training for NPC question answering in <i>Honkai: Star Rail</i>, and the multiplayer barista in <i>Petit Planet</i>.</p>
-          <p>A question I kept coming back to while working on the barista was how she could tell when someone in a group was speaking to her. I’m also interested in what a character should remember from earlier encounters and how it can infer what changed while a player was away.</p>
-        </div>
-      </section>
-      <section class="section" id="experience" aria-labelledby="experience-title">
-        <header class="section-heading"><h2 id="experience-title">Experience</h2></header>
-        <article class="role">
-          <div class="role-header"><h3>miHoYo</h3><span class="role-title">LLM Research Intern</span></div>
-          <dl class="work-lines">
-            <div><dt><i>Petit Planet</i> · Multiplayer NPC</dt><dd>I worked on character memory, multi-agent coordination, and tool use for the barista. In group conversations, she needs to identify who is being addressed and decide whether to keep listening, reply immediately, or reason through the context before acting.</dd></div>
-            <div><dt><i>Honkai: Star Rail</i> · NPC question answering</dt><dd>I contributed to language model post-training for NPC question answering.</dd></div>
-            <div><dt>In-house language model pretraining</dt><dd>I contributed to pretraining miHoYo’s internal language model.</dd></div>
-          </dl>
-        </article>
-      </section>
-      <section class="section" id="projects" aria-labelledby="projects-title">
-        <header class="section-heading"><h2 id="projects-title">Selected projects</h2></header>
-        <article class="featured-project" id="case" aria-labelledby="case-title">
-          <p class="project-type">miHoYo internship project · Illustrative scenario</p>
-          <h3 id="case-title">Two drinks on hold. Which one should the barista make?</h3>
-          <p>Two players are ordering over party chat on their way to the docks. The barista has to keep track of who agreed to what, including which conversation a quick “sure” belongs to.</p>
-          <dl class="case-dialogue"><div class="case-line"><dt>Cheng</dt><dd>One hot oat latte for me. Could you hold off until I give you the word?</dd></div>
-<div class="case-line"><dt>Man</dt><dd>Same for me. Hold mine too.</dd></div>
-<div class="case-line"><dt>Cheng to Man</dt><dd>Go on ahead to the docks. I’ll pick yours up.</dd></div>
-<div class="case-line"><dt>Man to Cheng</dt><dd>Sure.</dd></div></dl>
-          <p class="case-reading"><strong>Let the players finish</strong> · Man has agreed to a pickup arrangement. The barista knows both recipes and still has two drinks on hold.</p>
-          <dl class="case-dialogue"><div class="case-line"><dt>Cheng to the barista</dt><dd>The ferry’s nearly here. Make one of those iced and start it now.</dd></div><div class="case-line"><dt>Barista</dt><dd>Which one would you like iced, yours or Man’s?</dd></div></dl>
-          <p class="case-reading">Cheng is collecting both drinks. The speaker alone cannot tell the barista who owns the cup. One short question resolves the missing detail.</p>
-          <fieldset class="demo"><legend>Who answers “Mine. The other one can wait”?</legend><input type="radio" name="cup" id="cup-cheng" checked><label for="cup-cheng">Cheng</label> <input type="radio" name="cup" id="cup-man"><label for="cup-man">Man</label></fieldset>
-          <div aria-live="polite" aria-atomic="true" class="case-owner"><p class="outcome out-cheng">Cheng’s is now iced and ready to start. Man’s stays hot and on hold.</p>
-<p class="outcome out-man">Man’s is now iced and ready to start. Cheng’s stays hot and on hold.</p></div>
-          <p class="case-followup">A moment later the same player checks back in: “Can you get mine started now?”</p>
-          <fieldset class="demo"><legend>What does the barista know about this iced order?</legend><input type="radio" name="order" id="order-draft" checked><label for="order-draft">Unsent</label> <input type="radio" name="order" id="order-unknown"><label for="order-unknown">Sent, no receipt yet</label> <input type="radio" name="order" id="order-accepted"><label for="order-accepted">Accepted by the counter</label></fieldset>
-          <div aria-live="polite" aria-atomic="true" class="case-action"><div class="outcome out-draft"><strong>Send one order</strong><p>Submit the confirmed player’s iced drink and leave the other order on hold.</p></div>
-<div class="outcome out-unknown"><strong>Check the original order</strong><p>Look up the earlier submission. Confirm if the counter accepted it. While the outcome is unknown, keep the order pending to avoid making a second drink.</p></div>
-<div class="outcome out-accepted"><strong>Reply straight away</strong><p>“They’re making your iced latte. I’m holding the other one.” The receipt already answers the question; no second order is needed.</p></div></div>
-          <p class="case-foot">Switch the speaker to test which order changes. Switch the receipt state to test what the barista should do next.</p>
-        </article>
-        <article class="project-note">
-          <p class="project-type">Research concept</p>
-          <h3>Tidal Wetland</h3>
-          <p>A player opens a sluice gate and returns later to find a footpath underwater. To plan a route, the character needs to distinguish the effect of the open gate from the incoming tide. This fictional wetland also offers a setting for tracking shifts in habitat and animal activity.</p>
-        </article>
-        <article class="project-note">
-          <p class="project-type">Research concept</p>
-          <h3>The Repair Station</h3>
-          <p>A character hands a spare part to the player. When should their hands meet, the item change ownership, and the quest register the handover? I want to use this small interaction to study how animation and game state can stay in sync.</p>
-        </article>
-      </section>
-      <section class="section" id="manuscripts" aria-labelledby="manuscripts-title">
-        <header class="section-heading"><h2 id="manuscripts-title">Manuscripts in preparation</h2></header>
-        <p class="section-note">I am the sole first author of each of the following manuscripts.</p>
-        <ol class="paper-list">
-          <li><h3 lang="en">Counterfactual Post-Training for Multiplayer Game NPCs</h3><p>I study whether post-training on paired interactions can teach an NPC when to listen, clarify, or act when only the addressee or the owner of an item changes.</p></li>
-          <li><h3 lang="en">Action-Conditioned World Models for Persistent Game Ecosystems</h3><p>I study how to distinguish environmental change from the effects of a player’s actions under partial observation, so that an agent can predict which routes and resources remain available.</p></li>
-          <li><h3 lang="en">Task-Conditioned Visual Memory for Game Agents under Fixed Token Budgets</h3><p>An agent retracing its steps may need to remember a turn in the path or a tool left on a bench. I study whether task-conditioned selection preserves the right visual evidence under a fixed token budget.</p></li>
-        </ol>
-      </section>
-      <section class="section" id="research" aria-labelledby="research-title">
-        <header class="section-heading"><h2 id="research-title">Selected publications</h2></header>
-        <ul class="pub-list">
-          <li><span class="venue" lang="en">AAAI 2026</span><h3 lang="en">A Principle-Driven Adaptive Policy for Group Cognitive Stimulation Dialogue for Elderly with Cognitive Impairment</h3></li>
-          <li><span class="venue" lang="en">EMNLP 2025</span><h3 lang="en">ProReason: Multi-Modal Proactive Reasoning with Decoupled Eyesight and Wisdom</h3></li>
-        </ul>
-      </section>
-    </main>
-  </div>
-  <footer class="wrap site-footer"><span>Kai Liu</span><a href="#top">Back to top</a></footer>
+<body>
+  <p><a href="../">进入中文主页</a></p>
 </body>
 </html>

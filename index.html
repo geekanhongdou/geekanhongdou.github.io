@@ -3,32 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f9faf7">
+  <meta name="theme-color" content="#f5f4ef">
   <title>刘jesen凯 · Kai Liu | 香港大学</title>
   <meta name="description" content="刘jesen凯，香港大学博士生、计算机科学硕士。研究游戏智能体与交互式世界模型，曾在米哈游参与多人 NPC 研发与大模型训练。">
   <link rel="canonical" href="https://geekanhongdou.github.io/">
-  <link rel="alternate" hreflang="zh-CN" href="https://geekanhongdou.github.io/">
-  <link rel="alternate" hreflang="en" href="https://geekanhongdou.github.io/en/">
-  <link rel="alternate" hreflang="x-default" href="https://geekanhongdou.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:title" content="刘jesen凯 · Kai Liu | 香港大学">
   <meta property="og:description" content="刘jesen凯，香港大学博士生、计算机科学硕士。研究游戏智能体与交互式世界模型，曾在米哈游参与多人 NPC 研发与大模型训练。">
   <meta property="og:url" content="https://geekanhongdou.github.io/">
   <link rel="icon" href="./assets/profile/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/profile/portfolio.css">
+  <link rel="stylesheet" href="./assets/profile/portfolio.css?v=20261125">
+  <script src="./assets/profile/case-lab.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">跳到正文</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top"><span class="monogram" aria-hidden="true">KL</span><span class="brand-name">研究主页</span></a>
+      <a class="brand" href="#top"><span class="monogram" aria-hidden="true">KL</span><span class="brand-name">Kai Liu</span></a>
       <nav class="nav" aria-label="站内导航">
-        <a href="#experience">实习</a>
-        <a href="#projects">项目</a>
+        <a href="#experience">经历</a>
+        <a href="#case">案例</a>
         <a href="#manuscripts">论文</a>
       </nav>
-      <a class="language" href="en/index.html" hreflang="en" lang="en" aria-label="Read in English">EN</a>
     </div>
   </header>
   <div class="wrap page-grid">
@@ -47,10 +44,10 @@
     </aside>
     <main id="main" class="content" tabindex="-1">
       <section class="section intro" aria-labelledby="about-title">
-        <header class="section-heading"><h2 id="about-title">关于我</h2></header>
+        <header class="section-heading"><h2 id="about-title">游戏智能体与<br>交互式世界模型</h2></header>
         <div class="intro-copy">
-          <p>我在香港大学读博，研究游戏中的智能角色。此前，我在米哈游参与了内部大模型预训练、《崩坏：星穹铁道》相关的 NPC 问答后训练，以及《星布谷地》多人交互角色娜洛的研发。</p>
-          <p>做娜洛时，我常碰到这样一个问题：几位玩家围在一起聊天，角色怎么知道哪句话是对自己说的？我也关心角色该记住哪些线索，以及玩家离开一段时间后，它能否推断世界里发生了什么变化。</p>
+          <p>我在香港大学攻读博士，研究游戏中的角色如何根据多人对话和局部观察作出行动。角色需要记住谁作过什么承诺，也需要判断先前的观察在世界发生变化后是否仍然有效。</p>
+          <p>这条研究线来自我在米哈游参与的多人 NPC 研发。目前我关注三个问题：如何用成对交互训练角色的行动决策，如何在固定预算下保留与任务相关的视觉记忆，以及如何预测玩家行动对游戏生态的持续影响。</p>
         </div>
       </section>
       <section class="section" id="experience" aria-labelledby="experience-title">
@@ -67,25 +64,64 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <header class="section-heading"><h2 id="projects-title">代表项目</h2></header>
         <article class="featured-project" id="case" aria-labelledby="case-title">
-          <p class="project-type">米哈游实习项目 · 虚构交互示意</p>
-          <h3 id="case-title">两杯都点了，娜洛该先做哪杯？</h3>
-          <p>两位玩家在队伍语音里边赶路边点单。对娜洛来说，难的是记住谁答应了什么，以及这句「好」究竟是在回答谁。</p>
-          <dl class="case-dialogue"><div class="case-line"><dt>阿澄</dt><dd>娜洛，我要一杯热燕麦拿铁，等我叫你再做。</dd></div>
-<div class="case-line"><dt>小满</dt><dd>我跟阿澄一样，我的也先放着。</dd></div>
-<div class="case-line"><dt>阿澄 → 小满</dt><dd>你先去码头吧，我帮你拿回来。</dd></div>
-<div class="case-line"><dt>小满 → 阿澄</dt><dd>好。</dd></div></dl>
-          <p class="case-reading"><strong>此刻留在对话之外</strong> · 小满答应的是让阿澄代取。两杯都已有配方，却都还没到开做的时候。</p>
-          <dl class="case-dialogue"><div class="case-line"><dt>阿澄 → 娜洛</dt><dd>船快到了，一杯改冰的，先做吧。</dd></div><div class="case-line"><dt>娜洛</dt><dd>改哪杯，你的还是小满的？</dd></div></dl>
-          <p class="case-reading">阿澄手上要拿两杯，单凭发言人猜「一杯」的归属，可能会改错单。娜洛只追问缺的那一项。</p>
-          <fieldset class="demo"><legend>谁接着回答「我的，另一杯先等等」？</legend><input type="radio" name="cup" id="cup-cheng" checked><label for="cup-cheng">阿澄</label> <input type="radio" name="cup" id="cup-man"><label for="cup-man">小满</label></fieldset>
-          <div aria-live="polite" aria-atomic="true" class="case-owner"><p class="outcome out-cheng">阿澄的改冰，可开做；小满的仍是热饮，暂缓。</p>
-<p class="outcome out-man">小满的改冰，可开做；阿澄的仍是热饮，暂缓。</p></div>
-          <p class="case-followup">片刻后，刚才确认的玩家又问：「我那杯可以开始做了吧？」</p>
-          <fieldset class="demo"><legend>选择此时娜洛掌握的订单状态</legend><input type="radio" name="order" id="order-draft" checked><label for="order-draft">尚未发送</label> <input type="radio" name="order" id="order-unknown"><label for="order-unknown">已发出，回执未到</label> <input type="radio" name="order" id="order-accepted"><label for="order-accepted">吧台已接单</label></fieldset>
-          <div aria-live="polite" aria-atomic="true" class="case-action"><div class="outcome out-draft"><strong>提交一杯</strong><p>按刚确认的归属和冰饮配方开单。另一杯继续等。</p></div>
-<div class="outcome out-unknown"><strong>先核对原单</strong><p>查询刚才那次提交。查到已受理，就向玩家确认；只要结果还不确定，就保留待核对状态，避免吧台收到两杯。</p></div>
-<div class="outcome out-accepted"><strong>直接回话</strong><p>「你那杯冰的已经在做了，另一杯我先留着。」现有回执足以作答，无需再开单。</p></div></div>
-          <p class="case-foot">同一句确认，换一个说话的人，改变的是订单归属；只换吧台回执，改变的是下一步动作。两个判断可以分别检验。</p>
+          <header class="case-header">
+            <p class="project-type">《星布谷地》娜洛 · 多人 NPC 研发</p>
+            <h3 id="case-title">多人对话中的委托与行动</h3>
+            <p>我负责核心记忆、多智能体协作和工具调用相关工作。多人同时交谈时，角色需要持续跟踪每项委托的所有者、最新目的地和授权状态，并把异步工具回执关联回那一次行动。</p>
+          </header>
+          <section class="case-lab" aria-labelledby="lab-title">
+            <div class="lab-heading">
+              <h4 id="lab-title">观测站交接</h4>
+              <span>虚构交互原型</span>
+            </div>
+            <p class="lab-intro">两项物资委托最初去往不同位置。林舟临时改了目的地，两件物资现在都要送往东台。值班 NPC 收到一句新的确认。</p>
+            <div class="lab-grid">
+              <div class="lab-history">
+                <h5>已知事件</h5>
+                <ol class="lab-timeline">
+                  <li><time>18:42</time><p><strong>林舟 · A17</strong> 把蓝箱送南库，等我确认再发。</p></li>
+                  <li><time>18:43</time><p><strong>周屿 · B08</strong> 铜匣送东台，也先留着。</p></li>
+                  <li><time>18:44</time><p><strong>阿岑 → 周屿</strong> 我帮你催一下，你先走。<small>阿岑代传消息。B08 的授权人仍是周屿。</small></p></li>
+                  <li><time>18:45</time><p><strong>林舟 · A17</strong> 改送东台，还是等我确认。<small>A17 的目的地更新至第 2 版。</small></p></li>
+                </ol>
+              </div>
+              <div class="lab-controls">
+                <h5>本轮输入</h5>
+                <form id="case-controls" hidden>
+                  <label for="case-signal">确认从哪里来？</label>
+                  <select id="case-signal">
+                    <option value="owner">林舟确认最新委托</option>
+                    <option value="vague">公共频道发来模糊指令</option>
+                    <option value="relay">队友代为确认</option>
+                    <option value="stale">林舟确认旧版委托</option>
+                  </select>
+                  <label for="case-receipt">A17 第 2 版的工具记录</label>
+                  <select id="case-receipt">
+                    <option value="ready">尚未提交</option>
+                    <option value="pending">已提交，回执未到</option>
+                    <option value="accepted">已受理，等待发运</option>
+                  </select>
+                </form>
+                <blockquote id="case-message">林舟 → 值班 NPC「蓝箱按刚改的地址，现在发。」</blockquote>
+              </div>
+            </div>
+            <div class="lab-result" aria-live="polite" aria-atomic="true">
+              <div class="lab-decision">
+                <span>下一步</span>
+                <strong id="case-decision">提交一次发运</strong>
+                <p id="case-reply">蓝箱送东台，我现在登记发运。</p>
+              </div>
+              <dl class="lab-evidence">
+                <div><dt>引用证据</dt><dd id="case-evidence">蓝箱对应 A17。林舟确认了改址后的第 2 版。</dd></div>
+                <div><dt>工具动作</dt><dd><code id="case-tool">submit(A17, v2, 东台)</code></dd></div>
+                <div><dt>委托状态</dt><dd id="case-update">A17 等待工具回执。B08 继续暂缓。</dd></div>
+              </dl>
+            </div>
+          </section>
+          <div class="case-method">
+            <h4>如何评估</h4>
+            <p>构造成对场景，固定历史记录，每次只替换授权人、确认版本或工具回执。分别看角色能否选中正确的委托、识别过期确认，以及在工具状态不明时避免重复提交。</p>
+          </div>
         </article>
         <article class="project-note">
           <p class="project-type">研究构想</p>
