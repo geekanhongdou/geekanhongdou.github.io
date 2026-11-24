@@ -13,7 +13,7 @@
   <meta property="og:description" content="刘jesen凯，香港大学博士生、计算机科学硕士。研究游戏智能体与交互式世界模型，曾在米哈游参与多人 NPC 研发与大模型训练。">
   <meta property="og:url" content="https://geekanhongdou.github.io/">
   <link rel="icon" href="./assets/profile/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./assets/profile/portfolio.css?v=20261125">
+  <link rel="stylesheet" href="./assets/profile/portfolio.css?v=20261125b">
   <script src="./assets/profile/case-lab.js" defer></script>
 </head>
 <body id="top">
@@ -123,15 +123,35 @@
             <p>构造成对场景，固定历史记录，每次只替换授权人、确认版本或工具回执。分别看角色能否选中正确的委托、识别过期确认，以及在工具状态不明时避免重复提交。</p>
           </div>
         </article>
-        <article class="project-note">
-          <p class="project-type">研究构想</p>
-          <h3>潮汐湿地</h3>
-          <p>玩家开闸后离开，回来时原先的小路已经被水淹没。要判断接下来能走哪条路，角色需要分清水位变化有多少来自潮汐，有多少来自刚才的开闸。这个虚构湿地也为观察栖息地和动物活动的变化提供了环境。</p>
+        <article class="project-note" id="wetland" aria-labelledby="wetland-title">
+          <p class="project-type">研究构想 · 行动条件世界模型</p>
+          <h3 id="wetland-title">潮汐湿地：离开视野后的世界如何演变</h3>
+          <p>两次巡护任务里，角色回到同一座栈桥，看到的都是刚好没过桥面的水。一次是外潮漫过河岸，另一次是玩家此前开闸，让上游持续向湿地补水。两段画面几乎相同，退潮后能否原路返回却取决于不同的过程。</p>
+          <p class="concept-question">给定有限的观察与操作记录，角色能否判断什么时候可以过桥，以及什么时候值得绕路查看闸门？</p>
+          <details class="concept-design">
+            <summary>查看实验设计与评价指标</summary>
+            <dl>
+              <div><dt>成对推演</dt><dd>拟搭建一个可重复运行的湿地模拟器。从同一初始水位、潮相和地形出发，只改变一次开闸操作，再用相同的潮汐序列推演两条轨迹。另选当前水位相近、来水历史不同的时刻，检验模型能否预测下一次可通行窗口。</dd></div>
+              <div><dt>生态约束</dt><dd>设定虚拟水鸟在浅滩连续露出一段时间后才开始觅食。巡护任务既要按时到达对岸，也要避开觅食中的鸟群。水位决定何时能走，浅滩此前暴露了多久则影响哪条路适合走。</dd></div>
+              <div><dt>部分可观测</dt><dd>角色只能看到沿途画面、自己的操作和最后一次闸位读数。拟比较只看当前画面、保留观察历史、同时建模玩家操作三种方法。若队友可能在离屏期间改闸，可选择先去查看闸位，并计入额外路程。</dd></div>
+              <div><dt>怎样判分</dt><dd>用模拟器的完整轨迹核对预计通行时刻和开闸造成的水位差，再比较限时抵达率、穿越觅食区的次数与观测成本。测试时更换河道布局和潮汐周期。</dd></div>
+            </dl>
+          </details>
         </article>
-        <article class="project-note">
-          <p class="project-type">研究构想</p>
-          <h3>维修站</h3>
-          <p>玩家伸手接过角色递来的零件：两只手何时接触，物品何时换了持有者，任务又该何时显示完成？我想用一次交接研究角色动作与游戏状态如何对齐。</p>
+        <article class="project-note" id="handover" aria-labelledby="handover-title">
+          <p class="project-type">研究构想 · 可中断角色动画与交互控制</p>
+          <h3 id="handover-title">维修站：多人交接中的动作重规划</h3>
+          <p>机械师正把校准件递给甲，甲接起另一件工具，说了句「给乙吧」。这句话如果早到几帧，机械师可以收回手，转身递给乙。如果晚到几帧，零件已经在甲手里，接下来的交接就得由甲发起。</p>
+          <p class="concept-question">同一句指令落在接触前、双方共持或释放后，如何选出物理上可行的下一步，并让动作、物品归属和任务进度一致？</p>
+          <details class="concept-design">
+            <summary>查看实验设计与评价指标</summary>
+            <dl>
+              <div><dt>动作与任务</dt><dd>拟让上层策略选择继续递交、暂停、收回或转交，下层控制器在每个仿真步跟踪手腕、抓取点与物体姿态。任务记录同时保留预期接收者与实际持有者，接到改口时先更新目标。</dd></div>
+              <div><dt>交接边界</dt><dd>双方共持时，原持有者可以暂停释放，等对方松手后再收回。原持有者已经释放且甲抓稳时，归属转到甲。任务只有在当前指定的接收者抓稳后才结算一次。</dd></div>
+              <div><dt>成对试验</dt><dd>固定角色站位、零件、动作起点和改口录音，只把指令移到释放前后不同的仿真帧。再分别加入手部遮挡、乙伸手较慢两种扰动，比较播完整段动画、按固定关键帧切换和根据接触状态重新规划三种控制方式。</dd></div>
+              <div><dt>怎样判分</dt><dd>分别记录改口到动作调整的延迟、共持阶段的手物滑移距离、掉件率、错误归属与重复结算次数。即使画面衔接自然，只要背包中的零件记到了错误玩家名下，这次交接就算失败。</dd></div>
+            </dl>
+          </details>
         </article>
       </section>
       <section class="section" id="manuscripts" aria-labelledby="manuscripts-title">

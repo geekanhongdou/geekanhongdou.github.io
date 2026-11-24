@@ -90,6 +90,14 @@ h1,h2,h3,h4,h5 { color: var(--ink); }
 .featured-project :focus-visible { outline-color: #b1ddbd; }
 .project-note { margin-top: 24px; padding-left: 16px; border-left: 1px solid #a1b5a1; }
 .project-note h3 { margin-block: 2px 5px; }
+.concept-question { margin: 10px 0; color: var(--green); font-weight: 600; }
+.concept-design { border-block: 1px solid var(--line); }
+.concept-design summary { padding: 9px 2px; cursor: pointer; color: var(--green); font-size: .94rem; }
+.concept-design summary:hover { text-decoration: underline; text-underline-offset: 3px; }
+.concept-design dl { padding-bottom: 12px; }
+.concept-design dl > div { display: grid; grid-template-columns: 6.1em minmax(0, 1fr); gap: 10px; padding-block: 9px; border-top: 1px solid var(--line); }
+.concept-design dt { color: var(--ink); font-weight: 600; }
+@media(max-width: 620px) { .concept-design dl > div { grid-template-columns: 1fr; gap: 2px; } }
 .paper-list,.pub-list { list-style: none; padding: 0; margin: 16px 0 0; }
 .paper-list li,.pub-list li { border-top: 1px solid var(--line); margin-top: 15px; padding-top: 15px; }
 .paper-list h3,.pub-list h3 { font: 600 1.24rem/1.4 var(--serif); }
