@@ -67,24 +67,25 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <header class="section-heading"><h2 id="projects-title">代表项目</h2></header>
         <article class="featured-project" id="case" aria-labelledby="case-title">
-          <p class="project-type">米哈游实习项目</p>
-          <h3 id="case-title">娜洛什么时候该接话？</h3>
-          <p>在《星布谷地》的咖啡馆里，一位玩家可以向同伴要一杯咖啡，也可以向娜洛点单。说的是同一句话，角色该做的事却不同。</p>
-          <fieldset class="demo">
-            <legend>交互示意 · 这句话说给谁听？</legend>
-            <input type="radio" id="to-peer" name="addressee" aria-controls="peer-panel" checked><label for="to-peer">对同伴说</label>
-            <input type="radio" id="to-nalo" name="addressee" aria-controls="nalo-panel"><label for="to-nalo">对娜洛说</label>
-            <div class="demo-panels">
-              <div id="peer-panel" class="panel panel-peer">
-                <div class="utterance"><span>玩家 · 面向同伴</span><p>“帮我做杯咖啡。”</p></div>
-                <div class="decision"><strong>娜洛继续听</strong><p>两位玩家正在交谈，娜洛把话留给同伴。</p></div>
-              </div>
-              <div id="nalo-panel" class="panel panel-nalo">
-                <div class="utterance"><span>玩家 · 面向娜洛</span><p>“帮我做杯咖啡。”</p></div>
-                <div class="decision"><strong>娜洛接单</strong><p>娜洛回应请求，并调用游戏内的做咖啡工具。</p></div>
-              </div>
-            </div>
-          </fieldset>
+          <p class="project-type">米哈游实习项目 · 虚构交互示意</p>
+          <h3 id="case-title">两杯都点了，娜洛该先做哪杯？</h3>
+          <p>两位玩家在队伍语音里边赶路边点单。对娜洛来说，难的是记住谁答应了什么，以及这句「好」究竟是在回答谁。</p>
+          <dl class="case-dialogue"><div class="case-line"><dt>阿澄</dt><dd>娜洛，我要一杯热燕麦拿铁，等我叫你再做。</dd></div>
+<div class="case-line"><dt>小满</dt><dd>我跟阿澄一样，我的也先放着。</dd></div>
+<div class="case-line"><dt>阿澄 → 小满</dt><dd>你先去码头吧，我帮你拿回来。</dd></div>
+<div class="case-line"><dt>小满 → 阿澄</dt><dd>好。</dd></div></dl>
+          <p class="case-reading"><strong>此刻留在对话之外</strong> · 小满答应的是让阿澄代取。两杯都已有配方，却都还没到开做的时候。</p>
+          <dl class="case-dialogue"><div class="case-line"><dt>阿澄 → 娜洛</dt><dd>船快到了，一杯改冰的，先做吧。</dd></div><div class="case-line"><dt>娜洛</dt><dd>改哪杯，你的还是小满的？</dd></div></dl>
+          <p class="case-reading">阿澄手上要拿两杯，单凭发言人猜「一杯」的归属，可能会改错单。娜洛只追问缺的那一项。</p>
+          <fieldset class="demo"><legend>谁接着回答「我的，另一杯先等等」？</legend><input type="radio" name="cup" id="cup-cheng" checked><label for="cup-cheng">阿澄</label> <input type="radio" name="cup" id="cup-man"><label for="cup-man">小满</label></fieldset>
+          <div aria-live="polite" aria-atomic="true" class="case-owner"><p class="outcome out-cheng">阿澄的改冰，可开做；小满的仍是热饮，暂缓。</p>
+<p class="outcome out-man">小满的改冰，可开做；阿澄的仍是热饮，暂缓。</p></div>
+          <p class="case-followup">片刻后，刚才确认的玩家又问：「我那杯可以开始做了吧？」</p>
+          <fieldset class="demo"><legend>选择此时娜洛掌握的订单状态</legend><input type="radio" name="order" id="order-draft" checked><label for="order-draft">尚未发送</label> <input type="radio" name="order" id="order-unknown"><label for="order-unknown">已发出，回执未到</label> <input type="radio" name="order" id="order-accepted"><label for="order-accepted">吧台已接单</label></fieldset>
+          <div aria-live="polite" aria-atomic="true" class="case-action"><div class="outcome out-draft"><strong>提交一杯</strong><p>按刚确认的归属和冰饮配方开单。另一杯继续等。</p></div>
+<div class="outcome out-unknown"><strong>先核对原单</strong><p>查询刚才那次提交。查到已受理，就向玩家确认；只要结果还不确定，就保留待核对状态，避免吧台收到两杯。</p></div>
+<div class="outcome out-accepted"><strong>直接回话</strong><p>「你那杯冰的已经在做了，另一杯我先留着。」现有回执足以作答，无需再开单。</p></div></div>
+          <p class="case-foot">同一句确认，换一个说话的人，改变的是订单归属；只换吧台回执，改变的是下一步动作。两个判断可以分别检验。</p>
         </article>
         <article class="project-note">
           <p class="project-type">研究构想</p>

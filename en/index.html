@@ -67,24 +67,25 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <header class="section-heading"><h2 id="projects-title">Selected projects</h2></header>
         <article class="featured-project" id="case" aria-labelledby="case-title">
-          <p class="project-type">Internship project at miHoYo</p>
-          <h3 id="case-title">When should the barista speak?</h3>
-          <p>At the café in <i>Petit Planet</i>, a player might ask a friend for coffee or place an order with the barista. The words can be identical in both exchanges. What should the character do?</p>
-          <fieldset class="demo">
-            <legend>Illustrative dialogue · Who is being addressed?</legend>
-            <input type="radio" id="to-peer" name="addressee" aria-controls="peer-panel" checked><label for="to-peer">Another player</label>
-            <input type="radio" id="to-nalo" name="addressee" aria-controls="nalo-panel"><label for="to-nalo">The barista</label>
-            <div class="demo-panels">
-              <div id="peer-panel" class="panel panel-peer">
-                <div class="utterance"><span>Player · to a friend</span><p>“Could you make me a coffee?”</p></div>
-                <div class="decision"><strong>The barista listens</strong><p>The players are talking to each other. She leaves room for the friend to respond.</p></div>
-              </div>
-              <div id="nalo-panel" class="panel panel-nalo">
-                <div class="utterance"><span>Player · to the barista</span><p>“Could you make me a coffee?”</p></div>
-                <div class="decision"><strong>The barista takes the order</strong><p>She acknowledges the request and calls the in-game tool to make the coffee.</p></div>
-              </div>
-            </div>
-          </fieldset>
+          <p class="project-type">miHoYo internship project · Illustrative scenario</p>
+          <h3 id="case-title">Two drinks on hold. Which one should the barista make?</h3>
+          <p>Two players are ordering over party chat on their way to the docks. The barista has to keep track of who agreed to what, including which conversation a quick “sure” belongs to.</p>
+          <dl class="case-dialogue"><div class="case-line"><dt>Cheng</dt><dd>One hot oat latte for me. Could you hold off until I give you the word?</dd></div>
+<div class="case-line"><dt>Man</dt><dd>Same for me. Hold mine too.</dd></div>
+<div class="case-line"><dt>Cheng to Man</dt><dd>Go on ahead to the docks. I’ll pick yours up.</dd></div>
+<div class="case-line"><dt>Man to Cheng</dt><dd>Sure.</dd></div></dl>
+          <p class="case-reading"><strong>Let the players finish</strong> · Man has agreed to a pickup arrangement. The barista knows both recipes and still has two drinks on hold.</p>
+          <dl class="case-dialogue"><div class="case-line"><dt>Cheng to the barista</dt><dd>The ferry’s nearly here. Make one of those iced and start it now.</dd></div><div class="case-line"><dt>Barista</dt><dd>Which one would you like iced, yours or Man’s?</dd></div></dl>
+          <p class="case-reading">Cheng is collecting both drinks. The speaker alone cannot tell the barista who owns the cup. One short question resolves the missing detail.</p>
+          <fieldset class="demo"><legend>Who answers “Mine. The other one can wait”?</legend><input type="radio" name="cup" id="cup-cheng" checked><label for="cup-cheng">Cheng</label> <input type="radio" name="cup" id="cup-man"><label for="cup-man">Man</label></fieldset>
+          <div aria-live="polite" aria-atomic="true" class="case-owner"><p class="outcome out-cheng">Cheng’s is now iced and ready to start. Man’s stays hot and on hold.</p>
+<p class="outcome out-man">Man’s is now iced and ready to start. Cheng’s stays hot and on hold.</p></div>
+          <p class="case-followup">A moment later the same player checks back in: “Can you get mine started now?”</p>
+          <fieldset class="demo"><legend>What does the barista know about this iced order?</legend><input type="radio" name="order" id="order-draft" checked><label for="order-draft">Unsent</label> <input type="radio" name="order" id="order-unknown"><label for="order-unknown">Sent, no receipt yet</label> <input type="radio" name="order" id="order-accepted"><label for="order-accepted">Accepted by the counter</label></fieldset>
+          <div aria-live="polite" aria-atomic="true" class="case-action"><div class="outcome out-draft"><strong>Send one order</strong><p>Submit the confirmed player’s iced drink and leave the other order on hold.</p></div>
+<div class="outcome out-unknown"><strong>Check the original order</strong><p>Look up the earlier submission. Confirm if the counter accepted it. While the outcome is unknown, keep the order pending to avoid making a second drink.</p></div>
+<div class="outcome out-accepted"><strong>Reply straight away</strong><p>“They’re making your iced latte. I’m holding the other one.” The receipt already answers the question; no second order is needed.</p></div></div>
+          <p class="case-foot">Switch the speaker to test which order changes. Switch the receipt state to test what the barista should do next.</p>
         </article>
         <article class="project-note">
           <p class="project-type">Research concept</p>
